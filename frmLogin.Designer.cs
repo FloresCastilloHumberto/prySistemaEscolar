@@ -42,10 +42,10 @@
             // pcbLoginFondo
             // 
             pcbLoginFondo.Image = (Image)resources.GetObject("pcbLoginFondo.Image");
-            pcbLoginFondo.Location = new Point(36, 65);
+            pcbLoginFondo.Location = new Point(36, 42);
             pcbLoginFondo.Margin = new Padding(3, 2, 3, 2);
             pcbLoginFondo.Name = "pcbLoginFondo";
-            pcbLoginFondo.Size = new Size(231, 185);
+            pcbLoginFondo.Size = new Size(231, 208);
             pcbLoginFondo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLoginFondo.TabIndex = 0;
             pcbLoginFondo.TabStop = false;
@@ -106,6 +106,7 @@
             btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // frmLogin
             // 
