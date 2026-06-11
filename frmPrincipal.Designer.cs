@@ -125,7 +125,6 @@
             pnlContenedor.Margin = new Padding(3, 2, 3, 2);
             pnlContenedor.Name = "pnlContenedor";
             pnlContenedor.Size = new Size(1242, 586);
-            pnlContenedor.TabIndex = 6;
             // 
             // frmPrincipal
             // 

@@ -12,11 +12,6 @@ namespace prySistemaEscolar
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal()
-        {
-            InitializeComponent();
-        }
-
         private void pcbGeneral_MouseDown(object miPicture, MouseEventArgs e)
         {
             PictureBox pcb = (PictureBox)miPicture;
