@@ -126,7 +126,6 @@
             pnlContenedor.Name = "pnlContenedor";
             pnlContenedor.Size = new Size(1242, 586);
             pnlContenedor.TabIndex = 6;
-            pnlContenedor.Paint += pnlContenedor_Paint;
             // 
             // frmPrincipal
             // 

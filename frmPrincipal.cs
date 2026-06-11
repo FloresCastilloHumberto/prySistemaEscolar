@@ -17,16 +17,6 @@ namespace prySistemaEscolar
             InitializeComponent();
         }
 
-        private void pcbAlumnos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void pcbGeneral_MouseDown(object miPicture, MouseEventArgs e)
         {
             PictureBox pcb = (PictureBox)miPicture;
