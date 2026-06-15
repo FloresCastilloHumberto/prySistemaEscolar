@@ -42,9 +42,9 @@
             // pcbLoginFondo
             // 
             pcbLoginFondo.Image = (Image)resources.GetObject("pcbLoginFondo.Image");
-            pcbLoginFondo.Location = new Point(43, 38);
+            pcbLoginFondo.Location = new Point(35, 38);
             pcbLoginFondo.Name = "pcbLoginFondo";
-            pcbLoginFondo.Size = new Size(178, 165);
+            pcbLoginFondo.Size = new Size(183, 165);
             pcbLoginFondo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLoginFondo.TabIndex = 0;
             pcbLoginFondo.TabStop = false;
@@ -76,10 +76,10 @@
             // 
             pcbLoginIcono.BackColor = Color.Transparent;
             pcbLoginIcono.Image = (Image)resources.GetObject("pcbLoginIcono.Image");
-            pcbLoginIcono.Location = new Point(562, 38);
+            pcbLoginIcono.Location = new Point(532, 38);
             pcbLoginIcono.Margin = new Padding(3, 2, 3, 2);
             pcbLoginIcono.Name = "pcbLoginIcono";
-            pcbLoginIcono.Size = new Size(185, 165);
+            pcbLoginIcono.Size = new Size(193, 165);
             pcbLoginIcono.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLoginIcono.TabIndex = 3;
             pcbLoginIcono.TabStop = false;
