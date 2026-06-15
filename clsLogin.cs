@@ -44,7 +44,7 @@ namespace prySistemaEscolar
                             }
                             else
                             {
-                                throw new Exception("Usuario o contraseña incorrectos.m");
+                                throw new Exception("Usuario o contraseña incorrectos.");
                             }
                         }
                     }
