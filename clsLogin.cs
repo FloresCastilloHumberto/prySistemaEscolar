@@ -81,7 +81,8 @@ namespace prySistemaEscolar
                         }
                     }
                 }
-            }
+            }  //Cerrar el Try Catch
+
             catch (Exception ex)
             {
                 throw new Exception(ex.Message, ex);
