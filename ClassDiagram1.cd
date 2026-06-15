@@ -1,35 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="prySistemaEscolar.clsConexion">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+
     <TypeIdentifier>
       <HashCode>AACEAAAAAAAgAAAAAAAAAAAAAAAACAQAAAgAAgAQAAA=</HashCode>
       <FileName>clsConexion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="prySistemaEscolar.clsLogin">
-    <Position X="5.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAABAAAAAAAAAAAFgAAQCYAAEAgAAAAA=</HashCode>
+
       <FileName>clsLogin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="prySistemaEscolar.frmLogin">
-    <Position X="9.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAgAAAACAABAAQAACAAAgGAAAAAEACAAAAAAAAAAA=</HashCode>
       <FileName>frmLogin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="prySistemaEscolar.frmPrincipal">
-    <Position X="7.25" Y="1.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AEEEACQAgCAAACBAAACAIAACAAQAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>frmPrincipal.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="prySistemaEscolar.Program">
-    <Position X="3" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
