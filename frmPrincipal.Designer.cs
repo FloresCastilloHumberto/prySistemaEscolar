@@ -139,6 +139,7 @@
             pcbSalir.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbSalir.TabIndex = 6;
             pcbSalir.TabStop = false;
+            pcbSalir.Click += pcbSalir_Click;
             // 
             // frmPrincipal
             // 
