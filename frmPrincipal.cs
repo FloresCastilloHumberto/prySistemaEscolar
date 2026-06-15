@@ -52,5 +52,12 @@ namespace prySistemaEscolar
         {
             Application.Exit();
         }
+
+        private void pcbAlumnos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
