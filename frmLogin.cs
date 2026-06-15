@@ -32,5 +32,6 @@ namespace prySistemaEscolar
                 MessageBox.Show(ex.Message, "Error de autenticacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+       
     }
 }
