@@ -122,6 +122,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmLogin";
             Text = "Control de Acceso";
+            Load += frmLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pcbLoginFondo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbLoginIcono).EndInit();
             ResumeLayout(false);
