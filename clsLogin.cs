@@ -1,4 +1,4 @@
-﻿using MySqlConnector;
+﻿    using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,11 +51,11 @@ namespace prySistemaEscolar
                 using (var conexion = conexionBD.AbrirConexion())
                 {
 
-                    string sql = "SELECT vchperfil FROM tblUsuarios " +
-                                 "WHERE vchnombreUsuario = @usuario AND vchPASSWORD = MD5(@password);";
+                    string sql = "SELECT perfil FROM tblUsuarios " +
+                                 "WHERE nombreUsuario = @usuario AND password";
 
                     using (var consulta = new MySqlCommand(sql, conexion))
-                    {
+                    { 
                         consulta.Parameters.AddWithValue("@usuario", usuario);
                         consulta.Parameters.AddWithValue("@password", password);
 
