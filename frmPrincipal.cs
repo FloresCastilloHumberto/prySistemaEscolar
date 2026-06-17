@@ -31,7 +31,7 @@ namespace prySistemaEscolar
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            // MessageBox.Show("Ancho:" + this.Width.ToString() + "Alto:" + this.Height.ToString());
+            MessageBox.Show("Ancho:" + this.Width.ToString() + "Alto:" + this.Height.ToString());
 
             //Indica que pcbMenu es el padre de los botones
             pcbAlumnos.Parent = pcbMenu;
