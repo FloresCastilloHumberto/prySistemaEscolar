@@ -63,7 +63,7 @@ namespace prySistemaEscolar
                         {
                             if (resultado.Read())
                             {
-                                perfil = resultado.GetString("vchPerfil");
+                                perfil = resultado.GetString("Perfil");
                                 asignarPermisos();
 
                                 if (!esAdministrador && !esDocente)
