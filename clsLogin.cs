@@ -1,4 +1,4 @@
-﻿using MySqlConnector;
+﻿    using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,32 @@ namespace prySistemaEscolar
         public string Usuario { get => usuario; set => usuario = value; }
         public string Password { get => password; set => password = value; }
 
-        public static string perfil;
+        //atributo estatico.
+        private static string perfil;
+        private static bool esAdministrador;
+        private static bool esDocente;
+
+        //Propiedad estatica
+        public static bool EsAdministrador { get => esAdministrador; private set => esAdministrador = value; }
+        public static bool EsDocente { get => esDocente; private set => esDocente = value; }
+        public void asignarPermisos()
+        {
+            switch (perfil)
+            {
+                case "Administrador":
+                    esAdministrador= true;
+                    esDocente = false;
+                    break;
+                case "Docente":
+                    esAdministrador = false;
+                    esDocente = true;                        
+                    break;
+                default:
+                    esAdministrador = false;
+                    esDocente = false;                    
+                    break;
+            }
+        }
 
         public bool ValidarAcceso()
         {
@@ -27,10 +52,10 @@ namespace prySistemaEscolar
                 {
 
                     string sql = "SELECT perfil FROM tblUsuarios " +
-                                 "WHERE nombreUsuario = @usuario AND password =  @password;";
+                                 "WHERE nombreUsuario = @usuario AND password";
 
                     using (var consulta = new MySqlCommand(sql, conexion))
-                    {
+                    { 
                         consulta.Parameters.AddWithValue("@usuario", usuario);
                         consulta.Parameters.AddWithValue("@password", password);
 
@@ -39,17 +64,25 @@ namespace prySistemaEscolar
                             if (resultado.Read())
                             {
                                 perfil = resultado.GetString("Perfil");
-                                MessageBox.Show("Tu perfil es: " + perfil, " sistema");
+                                asignarPermisos();
+
+                                if (!esAdministrador && !esDocente)
+                                {
+                                    throw new Exception($"El perfil {perfil} no tiene permiso para acceder");
+                                }
+
+                                MessageBox.Show("Tu perfil es: " + perfil, "Sistema");
                                 return true;
                             }
                             else
                             {
-                                throw new Exception("Usuario o contraseña incorrectos.m");
-                            }
+                                throw new Exception("Usuario o contraseña incorrectos.");
+                            }                           
                         }
                     }
                 }
-            }
+            }  //Cerrar el Try Catch
+
             catch (Exception ex)
             {
                 throw new Exception(ex.Message, ex);

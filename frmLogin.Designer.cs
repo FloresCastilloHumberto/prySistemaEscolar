@@ -42,6 +42,9 @@
             // pcbLoginFondo
             // 
             pcbLoginFondo.Image = (Image)resources.GetObject("pcbLoginFondo.Image");
+            pcbLoginFondo.Location = new Point(35, 38);
+            pcbLoginFondo.Name = "pcbLoginFondo";
+            pcbLoginFondo.Size = new Size(183, 165);
             pcbLoginFondo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLoginFondo.TabIndex = 0;
             pcbLoginFondo.TabStop = false;
@@ -50,7 +53,7 @@
             // 
             txtUsuario.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold);
             txtUsuario.ForeColor = SystemColors.WindowText;
-            txtUsuario.Location = new Point(343, 83);
+            txtUsuario.Location = new Point(268, 38);
             txtUsuario.Margin = new Padding(3, 2, 3, 2);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Nombre de usuario";
@@ -61,7 +64,7 @@
             // 
             txtPassword.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold);
             txtPassword.ForeColor = SystemColors.WindowText;
-            txtPassword.Location = new Point(343, 130);
+            txtPassword.Location = new Point(268, 98);
             txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Contraseña del usuario";
@@ -73,10 +76,10 @@
             // 
             pcbLoginIcono.BackColor = Color.Transparent;
             pcbLoginIcono.Image = (Image)resources.GetObject("pcbLoginIcono.Image");
-            pcbLoginIcono.Location = new Point(709, 11);
+            pcbLoginIcono.Location = new Point(532, 38);
             pcbLoginIcono.Margin = new Padding(3, 2, 3, 2);
             pcbLoginIcono.Name = "pcbLoginIcono";
-            pcbLoginIcono.Size = new Size(103, 95);
+            pcbLoginIcono.Size = new Size(193, 165);
             pcbLoginIcono.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLoginIcono.TabIndex = 3;
             pcbLoginIcono.TabStop = false;
@@ -84,18 +87,19 @@
             // btnAcceder
             // 
             btnAcceder.Font = new Font("Cascadia Mono SemiBold", 10.8F, FontStyle.Bold);
-            btnAcceder.Location = new Point(343, 200);
+            btnAcceder.Location = new Point(268, 169);
             btnAcceder.Margin = new Padding(3, 2, 3, 2);
             btnAcceder.Name = "btnAcceder";
             btnAcceder.Size = new Size(119, 34);
             btnAcceder.TabIndex = 4;
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = true;
+            btnAcceder.Click += btnAcceder_Click;
             // 
             // btnSalir
             // 
             btnSalir.Font = new Font("Cascadia Mono SemiBold", 10.8F, FontStyle.Bold);
-            btnSalir.Location = new Point(471, 200);
+            btnSalir.Location = new Point(396, 169);
             btnSalir.Margin = new Padding(3, 2, 3, 2);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(119, 34);
@@ -118,6 +122,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmLogin";
             Text = "Control de Acceso";
+            Load += frmLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pcbLoginFondo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbLoginIcono).EndInit();
             ResumeLayout(false);

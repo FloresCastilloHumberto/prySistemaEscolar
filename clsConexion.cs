@@ -12,12 +12,12 @@ namespace prySistemaEscolar
     internal class clsConexion
     {
         private string host = "189.240.192.140";
-        private string bd = "bdescuela3d";
-        private string usuario = "terceroD";
-        private string password = "tercero@D";
+        private string bd = "bdescuelagdequipo3";
+        private string usuario = "gdEquipo3";
+        private string password = "grupo3";
         private string puerto = "3306";
 
-        private string cadenaConexion => $"server={host};dataase={bd};user={usuario};password={password};port={puerto}";
+        private string cadenaConexion => $"server={host};database={bd};user={usuario};password={password};port={puerto}";
 
         public MySqlConnection AbrirConexion()
         {

@@ -12,6 +12,11 @@ namespace prySistemaEscolar
 {
     public partial class frmPrincipal : Form
     {
+        public frmPrincipal()
+        {
+            InitializeComponent();
+        }
+
         private void pcbGeneral_MouseDown(object miPicture, MouseEventArgs e)
         {
             PictureBox pcb = (PictureBox)miPicture;
@@ -26,19 +31,40 @@ namespace prySistemaEscolar
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            // MessageBox.Show("Ancho:" + this.Width.ToString() + "Alto:" + this.Height.ToString());
-            
+            MessageBox.Show("Ancho:" + this.Width.ToString() + "Alto:" + this.Height.ToString());
+
             //Indica que pcbMenu es el padre de los botones
             pcbAlumnos.Parent = pcbMenu;
             pcbCarreras.Parent = pcbMenu;
             pcbDocentes.Parent = pcbMenu;
             pcbUsuarios.Parent = pcbMenu;
+            pcbSalir.Parent = pcbMenu;
 
             //El color del fondo es transparente
             pcbAlumnos.BackColor = Color.Transparent;
             pcbCarreras.BackColor = Color.Transparent;
             pcbDocentes.BackColor = Color.Transparent;
             pcbUsuarios.BackColor = Color.Transparent;
+            pcbSalir.BackColor = Color.Transparent;
+
+            //Verificar Permisos
+            pcbCarreras.Enabled = clsLogin.EsAdministrador;
+            pcbDocentes.Enabled = clsLogin.EsAdministrador;
+            pcbUsuarios.Enabled = clsLogin.EsAdministrador;
+
+            pcbAlumnos.Enabled = clsLogin.EsAdministrador || clsLogin.EsDocente;
         }
+
+        private void pcbSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pcbAlumnos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
