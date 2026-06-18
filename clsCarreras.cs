@@ -8,6 +8,5 @@ namespace prySistemaEscolar
 {
     internal class clsCarreras
     {
-
     }
 }
