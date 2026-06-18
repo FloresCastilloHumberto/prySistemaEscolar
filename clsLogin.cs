@@ -51,11 +51,11 @@ namespace prySistemaEscolar
                 using (var conexion = conexionBD.AbrirConexion())
                 {
 
-                    string sql = "SELECT perfil FROM tblUsuarios " +
-                                 "WHERE nombreUsuario = @usuario AND password";
+                    string sql = "SELECT vchperfil FROM tblUsuarios " +
+                                 "WHERE vchnombreUsuario = @usuario AND vchPASSWORD = MD5(@password);";
 
                     using (var consulta = new MySqlCommand(sql, conexion))
-                    { 
+                    {
                         consulta.Parameters.AddWithValue("@usuario", usuario);
                         consulta.Parameters.AddWithValue("@password", password);
 
@@ -63,7 +63,7 @@ namespace prySistemaEscolar
                         {
                             if (resultado.Read())
                             {
-                                perfil = resultado.GetString("Perfil");
+                                perfil = resultado.GetString("vchPerfil");
                                 asignarPermisos();
 
                                 if (!esAdministrador && !esDocente)
