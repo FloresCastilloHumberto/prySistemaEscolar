@@ -44,6 +44,7 @@
             // 
             // pcbLogo
             // 
+            pcbLogo.Image = Properties.Resources.Exam_Free_Sticker_PNG_Images__Transparent_HD_Photo_Clipart_;
             pcbLogo.Location = new Point(858, 25);
             pcbLogo.Name = "pcbLogo";
             pcbLogo.Size = new Size(177, 168);
@@ -73,7 +74,6 @@
             pnlContenedor.Name = "pnlContenedor";
             pnlContenedor.Size = new Size(584, 215);
             pnlContenedor.TabIndex = 2;
-            pnlContenedor.Paint += pnlContenedor_Paint;
             // 
             // btnEliminar
             // 

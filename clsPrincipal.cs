@@ -13,14 +13,16 @@ namespace prySistemaEscolar
 
         public void agregarAlContenedor(Form formulario, Panel panel)
         {
+            //Verifica si esta abierto
             if (misformsabiertos != null)
             {
                 misformsabiertos.Close();
                 misformsabiertos.Dispose();
             }
 
+            //Abrir el formulario en caso de que no este abierto
             misformsabiertos = formulario;
-            panel.Controls.Add(misformsabiertos);
+            panel.Controls.Clear();
 
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.Sizable;

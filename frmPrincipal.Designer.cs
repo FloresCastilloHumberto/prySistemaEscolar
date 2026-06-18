@@ -92,6 +92,7 @@
             pcbCarreras.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbCarreras.TabIndex = 3;
             pcbCarreras.TabStop = false;
+            pcbCarreras.Click += pcbCarreras_Click;
             pcbCarreras.MouseDown += pcbGeneral_MouseDown;
             pcbCarreras.MouseUp += pcbGeneral_MouseUp;
             // 
@@ -148,7 +149,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(153, 204, 255);
-            ClientSize = new Size(1920, 1009);
+            ClientSize = new Size(1370, 749);
             Controls.Add(pcbSalir);
             Controls.Add(pnlContenedor);
             Controls.Add(pcbUsuarios);
