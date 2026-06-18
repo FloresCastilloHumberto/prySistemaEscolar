@@ -132,7 +132,6 @@
             // 
             // pcbSalir
             // 
-            pcbSalir.Image = Properties.Resources.salir;
             pcbSalir.Location = new Point(61, 867);
             pcbSalir.Margin = new Padding(3, 2, 3, 2);
             pcbSalir.Name = "pcbSalir";
