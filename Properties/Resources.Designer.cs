@@ -233,6 +233,16 @@ namespace prySistemaEscolar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap salir {
+            get {
+                object obj = ResourceManager.GetObject("salir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Security_on_Customizable_Isometric_Illustrations___Amico_Style {
             get {
                 object obj = ResourceManager.GetObject("Security on Customizable Isometric Illustrations _ Amico Style", resourceCulture);

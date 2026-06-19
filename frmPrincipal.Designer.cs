@@ -133,7 +133,9 @@
             // 
             // pcbSalir
             // 
-            pcbSalir.Location = new Point(61, 867);
+            pcbSalir.BackgroundImage = Properties.Resources.salir;
+            pcbSalir.BackgroundImageLayout = ImageLayout.Stretch;
+            pcbSalir.Location = new Point(63, 740);
             pcbSalir.Margin = new Padding(3, 2, 3, 2);
             pcbSalir.Name = "pcbSalir";
             pcbSalir.Size = new Size(275, 101);
@@ -149,7 +151,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(153, 204, 255);
-            ClientSize = new Size(1370, 749);
+            ClientSize = new Size(1370, 984);
             Controls.Add(pcbSalir);
             Controls.Add(pnlContenedor);
             Controls.Add(pcbUsuarios);
