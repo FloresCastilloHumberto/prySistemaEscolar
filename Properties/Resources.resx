@@ -118,73 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Captura de pantalla 2026-06-04 0612231" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de pantalla 2026-06-04 0612231.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MENÚ" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MENÚ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="docentes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\docentes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Captura de pantalla 2026-06-04 061223" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de pantalla 2026-06-04 061223.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BtnBorrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BtnBorrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="alumno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alumno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconCarrera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconCarrera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="w" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\w.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MENÚ_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MENÚ_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Exam Free Sticker PNG Images (Transparent HD Photo Clipart)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Exam Free Sticker PNG Images (Transparent HD Photo Clipart).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="carrera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carrera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Captura de pantalla 2026-06-04 0612231" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2026-06-04 0612231.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sistema escolar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sistema escolar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NuevaCarrera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NuevaCarrera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImagenGuardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImagenGuardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BtnBorrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BtnBorrar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Imagen2Nuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Imagen2Nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="carrera_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carrera_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Security on Customizable Isometric Illustrations _ Amico Style" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Security on Customizable Isometric Illustrations _ Amico Style.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BtnBorrarCarrera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BtnBorrarCarrera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sistema escolar_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sistema escolar_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alumno_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alumno_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="855754366709799719" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\855754366709799719.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="docentes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\docentes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="alumno_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alumno_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="salir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salir1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="855754366709799719" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\855754366709799719.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MENÚ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MENÚ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carrera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carrera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alumno_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alumno_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnNuevaCarrera1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BtnNuevaCarrera1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exam Free Sticker PNG Images (Transparent HD Photo Clipart)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exam Free Sticker PNG Images (Transparent HD Photo Clipart).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Imagen2Nuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagen2Nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImagenGuardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImagenGuardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sistema escolar_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sistema escolar_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="w" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\w.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnBorrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BtnBorrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnNuevaCarrera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BtnNuevaCarrera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2026-06-04 061223" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2026-06-04 061223.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Security on Customizable Isometric Illustrations _ Amico Style" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Security on Customizable Isometric Illustrations _ Amico Style.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MENÚ_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MENÚ_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sistema escolar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sistema escolar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnBorrarCarrera1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BtnBorrarCarrera1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

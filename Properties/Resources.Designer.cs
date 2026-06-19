@@ -113,6 +113,56 @@ namespace prySistemaEscolar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BtnBorrar1 {
+            get {
+                object obj = ResourceManager.GetObject("BtnBorrar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BtnBorrarCarrera {
+            get {
+                object obj = ResourceManager.GetObject("BtnBorrarCarrera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BtnBorrarCarrera1 {
+            get {
+                object obj = ResourceManager.GetObject("BtnBorrarCarrera1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BtnNuevaCarrera {
+            get {
+                object obj = ResourceManager.GetObject("BtnNuevaCarrera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BtnNuevaCarrera1 {
+            get {
+                object obj = ResourceManager.GetObject("BtnNuevaCarrera1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2026_06_04_061223 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2026-06-04 061223", resourceCulture);
@@ -226,6 +276,16 @@ namespace prySistemaEscolar.Properties {
         internal static System.Drawing.Bitmap MENÚ_2 {
             get {
                 object obj = ResourceManager.GetObject("MENÚ_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NuevaCarrera {
+            get {
+                object obj = ResourceManager.GetObject("NuevaCarrera", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
