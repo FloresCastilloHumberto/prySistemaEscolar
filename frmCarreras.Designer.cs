@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarreras));
             pcbLogo = new PictureBox();
             lblTitulo = new Label();
             pnlContenedor = new Panel();
@@ -48,7 +49,7 @@
             pcbLogo.Image = Properties.Resources.iconCarrera;
             pcbLogo.Location = new Point(277, 30);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(116, 105);
+            pcbLogo.Size = new Size(177, 168);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 0;
             pcbLogo.TabStop = false;            
@@ -56,10 +57,10 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(442, 30);
+            lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(494, 118);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(214, 65);
+            lblTitulo.Size = new Size(144, 45);
             lblTitulo.TabIndex = 1;
             lblTitulo.Text = "Carreras";
             // 
@@ -70,24 +71,22 @@
             pnlContenedor.Controls.Add(btnGuardar);
             pnlContenedor.Controls.Add(txtDescripcion);
             pnlContenedor.Controls.Add(txtNombre);
-            pnlContenedor.Location = new Point(266, 153);
+            pnlContenedor.Location = new Point(266, 198);
             pnlContenedor.Name = "pnlContenedor";
             pnlContenedor.Size = new Size(584, 215);
             pnlContenedor.TabIndex = 2;
             // 
             // btnEliminar
             // 
-            btnEliminar.BackgroundImage = Properties.Resources.BtnBorrar;
             btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnEliminar.Location = new Point(416, 133);
+            btnEliminar.Location = new Point(341, 133);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(92, 71);
+            btnEliminar.Size = new Size(83, 71);
             btnEliminar.TabIndex = 4;
             btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnNuevo
             // 
-            btnNuevo.BackgroundImage = Properties.Resources.Imagen2Nuevo;
             btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
             btnNuevo.Location = new Point(73, 133);
             btnNuevo.Name = "btnNuevo";
@@ -124,9 +123,9 @@
             // dgvCarreras
             // 
             dgvCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCarreras.Location = new Point(266, 384);
+            dgvCarreras.Location = new Point(266, 433);
             dgvCarreras.Name = "dgvCarreras";
-            dgvCarreras.Size = new Size(584, 151);
+            dgvCarreras.Size = new Size(584, 74);
             dgvCarreras.TabIndex = 3;
             // 
             // label1
