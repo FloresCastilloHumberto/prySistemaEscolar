@@ -86,7 +86,7 @@
             // 
             // btnAcceder
             // 
-            btnAcceder.Font = new Font("Cascadia Mono SemiBold", 10.8F, FontStyle.Bold);
+            btnAcceder.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnAcceder.Location = new Point(268, 169);
             btnAcceder.Margin = new Padding(3, 2, 3, 2);
             btnAcceder.Name = "btnAcceder";
@@ -98,7 +98,7 @@
             // 
             // btnSalir
             // 
-            btnSalir.Font = new Font("Cascadia Mono SemiBold", 10.8F, FontStyle.Bold);
+            btnSalir.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnSalir.Location = new Point(396, 169);
             btnSalir.Margin = new Padding(3, 2, 3, 2);
             btnSalir.Name = "btnSalir";
@@ -112,7 +112,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(824, 291);
+            ClientSize = new Size(767, 285);
             Controls.Add(btnSalir);
             Controls.Add(btnAcceder);
             Controls.Add(pcbLoginIcono);
