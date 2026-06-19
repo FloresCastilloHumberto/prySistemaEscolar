@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarreras));
             pcbLogo = new PictureBox();
             lblTitulo = new Label();
             pnlContenedor = new Panel();
-            btnEliminar = new Button();
-            btnNuevo = new Button();
             btnGuardar = new Button();
             txtDescripcion = new TextBox();
             txtNombre = new TextBox();
             dgvCarreras = new DataGridView();
             label1 = new Label();
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCarreras).BeginInit();
@@ -52,7 +51,7 @@
             pcbLogo.Size = new Size(177, 168);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 0;
-            pcbLogo.TabStop = false;            
+            pcbLogo.TabStop = false;
             // 
             // lblTitulo
             // 
@@ -66,8 +65,8 @@
             // 
             // pnlContenedor
             // 
-            pnlContenedor.Controls.Add(btnEliminar);
-            pnlContenedor.Controls.Add(btnNuevo);
+            pnlContenedor.Controls.Add(button2);
+            pnlContenedor.Controls.Add(button1);
             pnlContenedor.Controls.Add(btnGuardar);
             pnlContenedor.Controls.Add(txtDescripcion);
             pnlContenedor.Controls.Add(txtNombre);
@@ -76,31 +75,13 @@
             pnlContenedor.Size = new Size(584, 215);
             pnlContenedor.TabIndex = 2;
             // 
-            // btnEliminar
-            // 
-            btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnEliminar.Location = new Point(341, 133);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(83, 71);
-            btnEliminar.TabIndex = 4;
-            btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnNuevo.Location = new Point(73, 133);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(92, 71);
-            btnNuevo.TabIndex = 3;
-            btnNuevo.UseVisualStyleBackColor = true;
-            // 
             // btnGuardar
             // 
             btnGuardar.BackgroundImage = Properties.Resources.ImagenGuardar;
             btnGuardar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnGuardar.Location = new Point(244, 133);
+            btnGuardar.Location = new Point(228, 133);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(92, 71);
+            btnGuardar.Size = new Size(119, 79);
             btnGuardar.TabIndex = 2;
             btnGuardar.UseVisualStyleBackColor = true;
             // 
@@ -137,6 +118,26 @@
             label1.TabIndex = 4;
             label1.Text = "dasdasdaasdasdasda";
             // 
+            // button1
+            // 
+            button1.BackgroundImage = Properties.Resources.BtnNuevaCarrera1;
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Location = new Point(73, 133);
+            button1.Name = "button1";
+            button1.Size = new Size(105, 79);
+            button1.TabIndex = 3;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.BackgroundImage = Properties.Resources.BtnBorrarCarrera1;
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.Location = new Point(389, 133);
+            button2.Name = "button2";
+            button2.Size = new Size(119, 82);
+            button2.TabIndex = 4;
+            button2.UseVisualStyleBackColor = true;
+            // 
             // frmCarreras
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -167,10 +168,10 @@
         private Panel pnlContenedor;
         private TextBox txtDescripcion;
         private TextBox txtNombre;
-        private Button btnEliminar;
-        private Button btnNuevo;
         private Button btnGuardar;
         private DataGridView dgvCarreras;
         private Label label1;
+        private Button button1;
+        private Button button2;
     }
 }
