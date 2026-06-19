@@ -63,11 +63,6 @@ namespace prySistemaEscolar
             Application.Exit();
         }
 
-        private void pcbAlumnos_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pcbCarreras_Click(object sender, EventArgs e)
         {
             principal = new clsPrincipal();

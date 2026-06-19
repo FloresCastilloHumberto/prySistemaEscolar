@@ -32,11 +32,12 @@
             lblTitulo = new Label();
             pnlContenedor = new Panel();
             btnEliminar = new Button();
-            btnGuardar = new Button();
             btnNuevo = new Button();
+            btnGuardar = new Button();
             txtDescripcion = new TextBox();
             txtNombre = new TextBox();
             dgvCarreras = new DataGridView();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCarreras).BeginInit();
@@ -45,13 +46,12 @@
             // pcbLogo
             // 
             pcbLogo.Image = Properties.Resources.iconCarrera;
-            pcbLogo.Location = new Point(709, 30);
+            pcbLogo.Location = new Point(277, 30);
             pcbLogo.Name = "pcbLogo";
             pcbLogo.Size = new Size(116, 105);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 0;
-            pcbLogo.TabStop = false;
-            pcbLogo.Click += pictureBox1_Click;
+            pcbLogo.TabStop = false;            
             // 
             // lblTitulo
             // 
@@ -66,8 +66,8 @@
             // pnlContenedor
             // 
             pnlContenedor.Controls.Add(btnEliminar);
-            pnlContenedor.Controls.Add(btnGuardar);
             pnlContenedor.Controls.Add(btnNuevo);
+            pnlContenedor.Controls.Add(btnGuardar);
             pnlContenedor.Controls.Add(txtDescripcion);
             pnlContenedor.Controls.Add(txtNombre);
             pnlContenedor.Location = new Point(266, 153);
@@ -85,25 +85,25 @@
             btnEliminar.TabIndex = 4;
             btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // btnGuardar
-            // 
-            btnGuardar.BackgroundImage = Properties.Resources.ImagenGuardar;
-            btnGuardar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnGuardar.Location = new Point(255, 133);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(92, 71);
-            btnGuardar.TabIndex = 3;
-            btnGuardar.UseVisualStyleBackColor = true;
-            // 
             // btnNuevo
             // 
             btnNuevo.BackgroundImage = Properties.Resources.Imagen2Nuevo;
             btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnNuevo.Location = new Point(82, 133);
+            btnNuevo.Location = new Point(73, 133);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(92, 71);
-            btnNuevo.TabIndex = 2;
+            btnNuevo.TabIndex = 3;
             btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.BackgroundImage = Properties.Resources.ImagenGuardar;
+            btnGuardar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnGuardar.Location = new Point(244, 133);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(92, 71);
+            btnGuardar.TabIndex = 2;
+            btnGuardar.UseVisualStyleBackColor = true;
             // 
             // txtDescripcion
             // 
@@ -129,6 +129,15 @@
             dgvCarreras.Size = new Size(584, 151);
             dgvCarreras.TabIndex = 3;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(707, 70);
+            label1.Name = "label1";
+            label1.Size = new Size(116, 15);
+            label1.TabIndex = 4;
+            label1.Text = "dasdasdaasdasdasda";
+            // 
             // frmCarreras
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -136,6 +145,7 @@
             BackgroundImage = Properties.Resources.fondo;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1226, 547);
+            Controls.Add(label1);
             Controls.Add(dgvCarreras);
             Controls.Add(pnlContenedor);
             Controls.Add(lblTitulo);
@@ -159,8 +169,9 @@
         private TextBox txtDescripcion;
         private TextBox txtNombre;
         private Button btnEliminar;
-        private Button btnGuardar;
         private Button btnNuevo;
+        private Button btnGuardar;
         private DataGridView dgvCarreras;
+        private Label label1;
     }
 }
