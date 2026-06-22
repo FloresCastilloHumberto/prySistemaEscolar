@@ -31,13 +31,12 @@
             pcbLogo = new PictureBox();
             lblTitulo = new Label();
             pnlContenedor = new Panel();
+            button2 = new Button();
+            button1 = new Button();
             btnGuardar = new Button();
             txtDescripcion = new TextBox();
             txtNombre = new TextBox();
             dgvCarreras = new DataGridView();
-            label1 = new Label();
-            button1 = new Button();
-            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCarreras).BeginInit();
@@ -48,7 +47,7 @@
             pcbLogo.Image = Properties.Resources.iconCarrera;
             pcbLogo.Location = new Point(277, 30);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(177, 168);
+            pcbLogo.Size = new Size(121, 80);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 0;
             pcbLogo.TabStop = false;
@@ -57,7 +56,7 @@
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(494, 118);
+            lblTitulo.Location = new Point(493, 48);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(144, 45);
             lblTitulo.TabIndex = 1;
@@ -70,24 +69,44 @@
             pnlContenedor.Controls.Add(btnGuardar);
             pnlContenedor.Controls.Add(txtDescripcion);
             pnlContenedor.Controls.Add(txtNombre);
-            pnlContenedor.Location = new Point(266, 198);
+            pnlContenedor.Location = new Point(266, 116);
             pnlContenedor.Name = "pnlContenedor";
-            pnlContenedor.Size = new Size(584, 215);
+            pnlContenedor.Size = new Size(584, 151);
             pnlContenedor.TabIndex = 2;
+            // 
+            // button2
+            // 
+            button2.BackgroundImage = Properties.Resources.BtnBorrarCarrera1;
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.Location = new Point(389, 76);
+            button2.Name = "button2";
+            button2.Size = new Size(99, 61);
+            button2.TabIndex = 4;
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = Properties.Resources.BtnNuevaCarrera1;
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Location = new Point(74, 76);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 61);
+            button1.TabIndex = 3;
+            button1.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
             btnGuardar.BackgroundImage = Properties.Resources.ImagenGuardar;
             btnGuardar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnGuardar.Location = new Point(228, 133);
+            btnGuardar.Location = new Point(242, 76);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(119, 79);
+            btnGuardar.Size = new Size(105, 61);
             btnGuardar.TabIndex = 2;
             btnGuardar.UseVisualStyleBackColor = true;
             // 
             // txtDescripcion
             // 
-            txtDescripcion.Location = new Point(73, 73);
+            txtDescripcion.Location = new Point(74, 47);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PlaceholderText = "Descripcion de la Carrera";
             txtDescripcion.Size = new Size(435, 23);
@@ -95,7 +114,7 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(74, 32);
+            txtNombre.Location = new Point(74, 18);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Nombre de la Carrera";
             txtNombre.Size = new Size(434, 23);
@@ -104,39 +123,10 @@
             // dgvCarreras
             // 
             dgvCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCarreras.Location = new Point(266, 433);
+            dgvCarreras.Location = new Point(266, 273);
             dgvCarreras.Name = "dgvCarreras";
-            dgvCarreras.Size = new Size(584, 74);
+            dgvCarreras.Size = new Size(584, 234);
             dgvCarreras.TabIndex = 3;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(707, 70);
-            label1.Name = "label1";
-            label1.Size = new Size(116, 15);
-            label1.TabIndex = 4;
-            label1.Text = "dasdasdaasdasdasda";
-            // 
-            // button1
-            // 
-            button1.BackgroundImage = Properties.Resources.BtnNuevaCarrera1;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(73, 133);
-            button1.Name = "button1";
-            button1.Size = new Size(105, 79);
-            button1.TabIndex = 3;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.BackgroundImage = Properties.Resources.BtnBorrarCarrera1;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Location = new Point(389, 133);
-            button2.Name = "button2";
-            button2.Size = new Size(119, 82);
-            button2.TabIndex = 4;
-            button2.UseVisualStyleBackColor = true;
             // 
             // frmCarreras
             // 
@@ -145,7 +135,6 @@
             BackgroundImage = Properties.Resources.fondo;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1226, 547);
-            Controls.Add(label1);
             Controls.Add(dgvCarreras);
             Controls.Add(pnlContenedor);
             Controls.Add(lblTitulo);
@@ -170,7 +159,6 @@
         private TextBox txtNombre;
         private Button btnGuardar;
         private DataGridView dgvCarreras;
-        private Label label1;
         private Button button1;
         private Button button2;
     }
