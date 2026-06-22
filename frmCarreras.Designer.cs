@@ -37,6 +37,7 @@
             txtDescripcion = new TextBox();
             txtNombre = new TextBox();
             dgvCarreras = new DataGridView();
+            txtNombreCarrera = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCarreras).BeginInit();
@@ -123,10 +124,19 @@
             // dgvCarreras
             // 
             dgvCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCarreras.Location = new Point(266, 273);
+            dgvCarreras.Location = new Point(266, 317);
             dgvCarreras.Name = "dgvCarreras";
-            dgvCarreras.Size = new Size(584, 234);
+            dgvCarreras.Size = new Size(584, 190);
             dgvCarreras.TabIndex = 3;
+            // 
+            // txtNombreCarrera
+            // 
+            txtNombreCarrera.Location = new Point(670, 288);
+            txtNombreCarrera.Name = "txtNombreCarrera";
+            txtNombreCarrera.PlaceholderText = "Busacar Carrera";
+            txtNombreCarrera.Size = new Size(180, 23);
+            txtNombreCarrera.TabIndex = 4;
+            txtNombreCarrera.TextChanged += txtNombreCarrera_TextChanged;
             // 
             // frmCarreras
             // 
@@ -135,6 +145,7 @@
             BackgroundImage = Properties.Resources.fondo;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1226, 547);
+            Controls.Add(txtNombreCarrera);
             Controls.Add(dgvCarreras);
             Controls.Add(pnlContenedor);
             Controls.Add(lblTitulo);
@@ -142,6 +153,7 @@
             DoubleBuffered = true;
             Name = "frmCarreras";
             Text = "frmCarreras";
+            Load += frmCarreras_Load;
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             pnlContenedor.ResumeLayout(false);
             pnlContenedor.PerformLayout();
@@ -161,5 +173,6 @@
         private DataGridView dgvCarreras;
         private Button button1;
         private Button button2;
+        private TextBox txtNombreCarrera;
     }
 }
