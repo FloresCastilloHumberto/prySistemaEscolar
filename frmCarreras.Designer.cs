@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             pcbLogo = new PictureBox();
             lblTitulo = new Label();
             pnlContenedor = new Panel();
@@ -47,9 +47,9 @@
             // pcbLogo
             // 
             pcbLogo.Image = Properties.Resources.iconCarrera;
-            pcbLogo.Location = new Point(417, 38);
+            pcbLogo.Location = new Point(74, 47);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(207, 144);
+            pcbLogo.Size = new Size(129, 96);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 0;
             pcbLogo.TabStop = false;
@@ -58,7 +58,7 @@
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(695, 120);
+            lblTitulo.Location = new Point(341, 47);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(144, 45);
             lblTitulo.TabIndex = 1;
@@ -71,7 +71,7 @@
             pnlContenedor.Controls.Add(btnGuardar);
             pnlContenedor.Controls.Add(txtDescripcion);
             pnlContenedor.Controls.Add(txtNombre);
-            pnlContenedor.Location = new Point(417, 197);
+            pnlContenedor.Location = new Point(74, 149);
             pnlContenedor.Name = "pnlContenedor";
             pnlContenedor.Size = new Size(670, 236);
             pnlContenedor.TabIndex = 2;
@@ -132,16 +132,16 @@
             dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCarreras.BackgroundColor = Color.RosyBrown;
             dgvCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvCarreras.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvCarreras.DefaultCellStyle = dataGridViewCellStyle1;
             dgvCarreras.GridColor = Color.RosyBrown;
-            dgvCarreras.Location = new Point(417, 478);
+            dgvCarreras.Location = new Point(74, 430);
             dgvCarreras.Name = "dgvCarreras";
             dgvCarreras.Size = new Size(670, 282);
             dgvCarreras.TabIndex = 3;
@@ -150,9 +150,9 @@
             // txtNombreCarrera
             // 
             txtNombreCarrera.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombreCarrera.Location = new Point(818, 439);
+            txtNombreCarrera.Location = new Point(478, 391);
             txtNombreCarrera.Name = "txtNombreCarrera";
-            txtNombreCarrera.PlaceholderText = "Busacar Carrera";
+            txtNombreCarrera.PlaceholderText = "Buscar Carrera";
             txtNombreCarrera.Size = new Size(266, 33);
             txtNombreCarrera.TabIndex = 4;
             txtNombreCarrera.TextChanged += txtNombreCarrera_TextChanged;
@@ -163,7 +163,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.fondo;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1489, 858);
+            ClientSize = new Size(806, 749);
             Controls.Add(txtNombreCarrera);
             Controls.Add(dgvCarreras);
             Controls.Add(pnlContenedor);

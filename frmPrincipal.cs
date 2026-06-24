@@ -38,14 +38,13 @@ namespace prySistemaEscolar
             int anchoMaximo = this.Width;
             int altoMaximo = this.Height;
 
-            this.Size = new Size(anchoMaximo, altoMaximo);
-
             //Indica que pcbMenu es el padre de los botones
             pcbAlumnos.Parent = pcbMenu;
             pcbCarreras.Parent = pcbMenu;
             pcbDocentes.Parent = pcbMenu;
             pcbUsuarios.Parent = pcbMenu;
             pcbSalir.Parent = pcbMenu;
+            pcbTutores.Parent = pcbMenu;
 
             //El color del fondo es transparente
             pcbAlumnos.BackColor = Color.Transparent;
@@ -53,6 +52,7 @@ namespace prySistemaEscolar
             pcbDocentes.BackColor = Color.Transparent;
             pcbUsuarios.BackColor = Color.Transparent;
             pcbSalir.BackColor = Color.Transparent;
+            pcbTutores.BackColor = Color.Transparent;
             
 
             //Verificar Permisos
@@ -60,6 +60,7 @@ namespace prySistemaEscolar
             pcbDocentes.Enabled = clsLogin.EsAdministrador;
             pcbUsuarios.Enabled = clsLogin.EsAdministrador;
             pcbSalir.Enabled = clsLogin.EsAdministrador;
+            pcbTutores.Enabled = clsLogin.EsAdministrador;
 
             pcbAlumnos.Enabled = clsLogin.EsAdministrador || clsLogin.EsDocente;
         }
