@@ -150,7 +150,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(153, 204, 255);
-            ClientSize = new Size(1370, 984);
+            ClientSize = new Size(1920, 1009);
             Controls.Add(pcbSalir);
             Controls.Add(pnlContenedor);
             Controls.Add(pcbUsuarios);

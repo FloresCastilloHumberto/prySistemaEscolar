@@ -32,7 +32,13 @@ namespace prySistemaEscolar
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            // MessageBox.Show("Ancho:" + this.Width.ToString() + "Alto:" + this.Height.ToString());
+            //MessageBox para mostrar el ancho maximo de una pc
+            //MessageBox.Show("Ancho:" + this.Width.ToString() + "Alto:" + this.Height.ToString());
+
+            int anchoMaximo = this.Width;
+            int altoMaximo = this.Height;
+
+            this.Size = new Size(anchoMaximo, altoMaximo);
 
             //Indica que pcbMenu es el padre de los botones
             pcbAlumnos.Parent = pcbMenu;
