@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             pcbLogo = new PictureBox();
             lblTitulo = new Label();
             pnlContenedor = new Panel();
@@ -41,10 +41,10 @@
             txtParentesco = new TextBox();
             txtNombre = new TextBox();
             txtNombreTutor = new TextBox();
-            dgvCarreras = new DataGridView();
+            dgvTutores = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvCarreras).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTutores).BeginInit();
             SuspendLayout();
             // 
             // pcbLogo
@@ -118,6 +118,7 @@
             btnBorrar.Size = new Size(117, 77);
             btnBorrar.TabIndex = 4;
             btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.Click += btnEliminar_Click;
             // 
             // btnNuevo
             // 
@@ -128,6 +129,7 @@
             btnNuevo.Size = new Size(147, 77);
             btnNuevo.TabIndex = 3;
             btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnGuardar
             // 
@@ -138,6 +140,7 @@
             btnGuardar.Size = new Size(123, 77);
             btnGuardar.TabIndex = 2;
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // txtParentesco
             // 
@@ -165,25 +168,27 @@
             txtNombreTutor.PlaceholderText = "Buscar Tutor";
             txtNombreTutor.Size = new Size(266, 33);
             txtNombreTutor.TabIndex = 5;
+            txtNombreTutor.TextChanged += txtNombreTutor_TextChanged;
             // 
-            // dgvCarreras
+            // dgvTutores
             // 
-            dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvCarreras.BackgroundColor = Color.RosyBrown;
-            dgvCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvCarreras.DefaultCellStyle = dataGridViewCellStyle2;
-            dgvCarreras.GridColor = Color.RosyBrown;
-            dgvCarreras.Location = new Point(69, 459);
-            dgvCarreras.Name = "dgvCarreras";
-            dgvCarreras.Size = new Size(670, 259);
-            dgvCarreras.TabIndex = 6;
+            dgvTutores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTutores.BackgroundColor = Color.RosyBrown;
+            dgvTutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvTutores.DefaultCellStyle = dataGridViewCellStyle1;
+            dgvTutores.GridColor = Color.RosyBrown;
+            dgvTutores.Location = new Point(69, 459);
+            dgvTutores.Name = "dgvTutores";
+            dgvTutores.Size = new Size(670, 259);
+            dgvTutores.TabIndex = 6;
+            dgvTutores.SelectionChanged += dgvTutores_SelectionChanged;
             // 
             // frmTutores
             // 
@@ -192,7 +197,7 @@
             BackgroundImage = Properties.Resources.fondo;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(815, 749);
-            Controls.Add(dgvCarreras);
+            Controls.Add(dgvTutores);
             Controls.Add(txtNombreTutor);
             Controls.Add(pnlContenedor);
             Controls.Add(lblTitulo);
@@ -204,7 +209,7 @@
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             pnlContenedor.ResumeLayout(false);
             pnlContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvCarreras).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTutores).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -220,7 +225,7 @@
         private TextBox txtParentesco;
         private TextBox txtNombre;
         private TextBox txtNombreTutor;
-        private DataGridView dgvCarreras;
+        private DataGridView dgvTutores;
         private TextBox txtTelefono;
         private TextBox txtCorreo;
         private TextBox txtDireccion;

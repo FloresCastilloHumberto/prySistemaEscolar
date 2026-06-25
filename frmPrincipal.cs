@@ -53,7 +53,7 @@ namespace prySistemaEscolar
             pcbUsuarios.BackColor = Color.Transparent;
             pcbSalir.BackColor = Color.Transparent;
             pcbTutores.BackColor = Color.Transparent;
-            
+
 
             //Verificar Permisos
             pcbCarreras.Enabled = clsLogin.EsAdministrador;
@@ -74,6 +74,12 @@ namespace prySistemaEscolar
         {
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmCarreras(), pnlContenedor);
+        }
+
+        private void pcbTutores_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmTutores(), pnlContenedor);
         }
     }
 }
