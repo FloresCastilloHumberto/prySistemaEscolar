@@ -32,14 +32,16 @@
             pcbLogo = new PictureBox();
             lblTitulo = new Label();
             pnlContenedor = new Panel();
+            txtCorreo = new TextBox();
+            txtDireccion = new TextBox();
+            txtTelefono = new TextBox();
             btnBorrar = new Button();
             btnNuevo = new Button();
             btnGuardar = new Button();
-            txtCorreo = new TextBox();
+            txtParentesco = new TextBox();
             txtNombre = new TextBox();
             txtNombreTutor = new TextBox();
             dgvCarreras = new DataGridView();
-            txtTelefono = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCarreras).BeginInit();
@@ -67,16 +69,45 @@
             // 
             // pnlContenedor
             // 
+            pnlContenedor.Controls.Add(txtCorreo);
+            pnlContenedor.Controls.Add(txtDireccion);
             pnlContenedor.Controls.Add(txtTelefono);
             pnlContenedor.Controls.Add(btnBorrar);
             pnlContenedor.Controls.Add(btnNuevo);
             pnlContenedor.Controls.Add(btnGuardar);
-            pnlContenedor.Controls.Add(txtCorreo);
+            pnlContenedor.Controls.Add(txtParentesco);
             pnlContenedor.Controls.Add(txtNombre);
             pnlContenedor.Location = new Point(69, 169);
             pnlContenedor.Name = "pnlContenedor";
             pnlContenedor.Size = new Size(670, 236);
             pnlContenedor.TabIndex = 3;
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.Font = new Font("Segoe UI", 14.25F);
+            txtCorreo.Location = new Point(350, 104);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.PlaceholderText = "Escribir correo";
+            txtCorreo.Size = new Size(301, 33);
+            txtCorreo.TabIndex = 7;
+            // 
+            // txtDireccion
+            // 
+            txtDireccion.Font = new Font("Segoe UI", 14.25F);
+            txtDireccion.Location = new Point(350, 62);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.PlaceholderText = "Escribir dirección";
+            txtDireccion.Size = new Size(301, 33);
+            txtDireccion.TabIndex = 6;
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.Font = new Font("Segoe UI", 14.25F);
+            txtTelefono.Location = new Point(13, 104);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.PlaceholderText = "Telefono";
+            txtTelefono.Size = new Size(300, 33);
+            txtTelefono.TabIndex = 5;
             // 
             // btnBorrar
             // 
@@ -102,28 +133,28 @@
             // 
             btnGuardar.BackgroundImage = Properties.Resources.ImagenGuardar;
             btnGuardar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnGuardar.Location = new Point(288, 143);
+            btnGuardar.Location = new Point(290, 143);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(123, 77);
             btnGuardar.TabIndex = 2;
             btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // txtCorreo
+            // txtParentesco
             // 
-            txtCorreo.Font = new Font("Segoe UI", 14.25F);
-            txtCorreo.Location = new Point(12, 62);
-            txtCorreo.Name = "txtCorreo";
-            txtCorreo.PlaceholderText = "Correo";
-            txtCorreo.Size = new Size(526, 33);
-            txtCorreo.TabIndex = 1;
+            txtParentesco.Font = new Font("Segoe UI", 14.25F);
+            txtParentesco.Location = new Point(12, 62);
+            txtParentesco.Name = "txtParentesco";
+            txtParentesco.PlaceholderText = "Escribir parentesco";
+            txtParentesco.Size = new Size(301, 33);
+            txtParentesco.TabIndex = 1;
             // 
             // txtNombre
             // 
             txtNombre.Font = new Font("Segoe UI", 14.25F);
             txtNombre.Location = new Point(13, 14);
             txtNombre.Name = "txtNombre";
-            txtNombre.PlaceholderText = "Nombre del tutor ";
-            txtNombre.Size = new Size(442, 33);
+            txtNombre.PlaceholderText = "Escribir nombre del tutor ";
+            txtNombre.Size = new Size(638, 33);
             txtNombre.TabIndex = 0;
             // 
             // txtNombreTutor
@@ -154,15 +185,6 @@
             dgvCarreras.Size = new Size(670, 259);
             dgvCarreras.TabIndex = 6;
             // 
-            // txtTelefono
-            // 
-            txtTelefono.Font = new Font("Segoe UI", 14.25F);
-            txtTelefono.Location = new Point(460, 14);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.PlaceholderText = "Telefono";
-            txtTelefono.Size = new Size(197, 33);
-            txtTelefono.TabIndex = 5;
-            // 
             // frmTutores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -178,6 +200,7 @@
             DoubleBuffered = true;
             Name = "frmTutores";
             Text = "frmTutores";
+            Load += frmTutores_Load;
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             pnlContenedor.ResumeLayout(false);
             pnlContenedor.PerformLayout();
@@ -194,10 +217,12 @@
         private Button btnBorrar;
         private Button btnNuevo;
         private Button btnGuardar;
-        private TextBox txtCorreo;
+        private TextBox txtParentesco;
         private TextBox txtNombre;
         private TextBox txtNombreTutor;
         private DataGridView dgvCarreras;
         private TextBox txtTelefono;
+        private TextBox txtCorreo;
+        private TextBox txtDireccion;
     }
 }
