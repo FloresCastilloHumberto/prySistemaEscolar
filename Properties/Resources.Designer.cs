@@ -263,6 +263,16 @@ namespace prySistemaEscolar.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LogoTutores {
+            get {
+                object obj = ResourceManager.GetObject("LogoTutores", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MENÚ {
             get {
                 object obj = ResourceManager.GetObject("MENÚ", resourceCulture);
