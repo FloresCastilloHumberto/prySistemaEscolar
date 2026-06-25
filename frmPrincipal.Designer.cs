@@ -179,7 +179,6 @@
             Name = "frmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sistema Escolar";
-            WindowState = FormWindowState.Maximized;
             Load += frmPrincipal_Load;
             ((System.ComponentModel.ISupportInitialize)pcbMenu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbTitulo).EndInit();
