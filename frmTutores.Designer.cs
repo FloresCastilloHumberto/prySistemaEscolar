@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pcbLogo = new PictureBox();
             lblTitulo = new Label();
             pnlContenedor = new Panel();
@@ -50,9 +51,9 @@
             // pcbLogo
             // 
             pcbLogo.Image = Properties.Resources.LogoTutores;
-            pcbLogo.Location = new Point(56, 37);
+            pcbLogo.Location = new Point(69, 37);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(130, 115);
+            pcbLogo.Size = new Size(78, 73);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 1;
             pcbLogo.TabStop = false;
@@ -77,7 +78,7 @@
             pnlContenedor.Controls.Add(btnGuardar);
             pnlContenedor.Controls.Add(txtParentesco);
             pnlContenedor.Controls.Add(txtNombre);
-            pnlContenedor.Location = new Point(69, 169);
+            pnlContenedor.Location = new Point(69, 127);
             pnlContenedor.Name = "pnlContenedor";
             pnlContenedor.Size = new Size(670, 236);
             pnlContenedor.TabIndex = 3;
@@ -163,7 +164,7 @@
             // txtNombreTutor
             // 
             txtNombreTutor.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombreTutor.Location = new Point(473, 420);
+            txtNombreTutor.Location = new Point(473, 369);
             txtNombreTutor.Name = "txtNombreTutor";
             txtNombreTutor.PlaceholderText = "Buscar Tutor";
             txtNombreTutor.Size = new Size(266, 33);
@@ -174,17 +175,25 @@
             // 
             dgvTutores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTutores.BackgroundColor = Color.RosyBrown;
-            dgvTutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dgvTutores.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvTutores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvTutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlLight;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlDark;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvTutores.DefaultCellStyle = dataGridViewCellStyle2;
             dgvTutores.GridColor = Color.RosyBrown;
-            dgvTutores.Location = new Point(69, 459);
+            dgvTutores.Location = new Point(69, 408);
             dgvTutores.Name = "dgvTutores";
             dgvTutores.Size = new Size(670, 259);
             dgvTutores.TabIndex = 6;
