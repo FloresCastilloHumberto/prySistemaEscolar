@@ -214,7 +214,6 @@
             DoubleBuffered = true;
             Name = "frmTutores";
             Text = "frmTutores";
-            Load += frmTutores_Load;
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             pnlContenedor.ResumeLayout(false);
             pnlContenedor.PerformLayout();
