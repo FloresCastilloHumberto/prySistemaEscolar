@@ -193,7 +193,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvTutores.DefaultCellStyle = dataGridViewCellStyle2;
             dgvTutores.GridColor = Color.RosyBrown;
-            dgvTutores.Location = new Point(69, 408);
+            dgvTutores.Location = new Point(69, 425);
             dgvTutores.Name = "dgvTutores";
             dgvTutores.Size = new Size(670, 259);
             dgvTutores.TabIndex = 6;
