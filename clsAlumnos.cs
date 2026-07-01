@@ -160,6 +160,23 @@ namespace prySistemaEscolar
             return tabla;
         }
 
+        //Metodo para limbiar por medio del panel los Textbox y Combobox
+        public void LimpiarPanel(Panel panelDestino)
+        {
+            foreach (Control control in panelDestino.Controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Clear();
+                }
+                else if (control is ComboBox)
+                {
+                    ((ComboBox)control).SelectedIndex = 0;
+
+                }
+            }
+        }
+
 
     }
 }

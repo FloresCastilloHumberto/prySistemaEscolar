@@ -121,7 +121,18 @@ namespace prySistemaEscolar
                 MessageBox.Show("Error al mapear los datos seleccionados: " + ex.Message);
             }
 
+
         }
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            idMatricula = 0;
+            idUsuario = 0;
+
+            alumnos.LimpiarPanel(pnlAlumno);
+            alumnos.LimpiarPanel(pnlUsuario);
+            txtMatricula.Focus();
+        }
+
     }
 }
 

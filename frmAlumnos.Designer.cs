@@ -39,6 +39,7 @@
             cmbTutor = new ComboBox();
             cmbCarrera = new ComboBox();
             pnlAlumno = new Panel();
+            txtMatricula = new TextBox();
             pnlUsuario = new Panel();
             cmbPerfil = new ComboBox();
             txtPassword = new TextBox();
@@ -52,7 +53,6 @@
             dgvAlumnos = new DataGridView();
             lblTitulo = new Label();
             pcbLogo = new PictureBox();
-            txtMatricula = new TextBox();
             pnlAlumno.SuspendLayout();
             pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
@@ -157,6 +157,15 @@
             pnlAlumno.Size = new Size(476, 201);
             pnlAlumno.TabIndex = 11;
             // 
+            // txtMatricula
+            // 
+            txtMatricula.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            txtMatricula.Location = new Point(11, 12);
+            txtMatricula.Name = "txtMatricula";
+            txtMatricula.PlaceholderText = "Matricula";
+            txtMatricula.Size = new Size(223, 27);
+            txtMatricula.TabIndex = 11;
+            // 
             // pnlUsuario
             // 
             pnlUsuario.Controls.Add(cmbPerfil);
@@ -234,6 +243,7 @@
             btnNuevo.Size = new Size(147, 77);
             btnNuevo.TabIndex = 16;
             btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnGuardar
             // 
@@ -293,15 +303,6 @@
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 21;
             pcbLogo.TabStop = false;
-            // 
-            // txtMatricula
-            // 
-            txtMatricula.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            txtMatricula.Location = new Point(11, 12);
-            txtMatricula.Name = "txtMatricula";
-            txtMatricula.PlaceholderText = "Matricula";
-            txtMatricula.Size = new Size(223, 27);
-            txtMatricula.TabIndex = 11;
             // 
             // frmAlumnos
             // 
