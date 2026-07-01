@@ -12,25 +12,31 @@ namespace prySistemaEscolar
 {
     public partial class frmAlumnos : Form
     {
+        clsAlumnos alumnos;
+
         public frmAlumnos()
         {
             InitializeComponent();
+            CargarGrid();
         }
 
-        private void frmAlumnos_Load(object sender, EventArgs e)
+        //meotodo para cargar el fatagriview
+        public void CargarGrid()
         {
+            alumnos = new clsAlumnos();
+            dgvAlumnos.DataSource = null;
+            dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-        }
-
-        private void cmbTutor_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void pnlAlumno_Paint(object sender, PaintEventArgs e)
-        {
-
+            try
+            {
+                // Asignamos la tabla virtual de la clase directamente al control visual
+                dgvAlumnos.DataSource = alumnos.CargarDataGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
+
 }

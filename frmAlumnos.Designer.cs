@@ -50,12 +50,12 @@
             btnNuevo = new Button();
             btnGuardar = new Button();
             txtNombreAlumno = new TextBox();
-            dgvCarreras = new DataGridView();
+            dgvAlumnos = new DataGridView();
             lblTitulo = new Label();
             pcbLogo = new PictureBox();
             pnlAlumno.SuspendLayout();
             pnlUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvCarreras).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
             // 
@@ -139,7 +139,6 @@
             cmbTutor.Name = "cmbTutor";
             cmbTutor.Size = new Size(223, 28);
             cmbTutor.TabIndex = 9;
-            cmbTutor.SelectedIndexChanged += cmbTutor_SelectedIndexChanged;
             // 
             // cmbCarrera
             // 
@@ -166,7 +165,6 @@
             pnlAlumno.Name = "pnlAlumno";
             pnlAlumno.Size = new Size(476, 201);
             pnlAlumno.TabIndex = 11;
-            pnlAlumno.Paint += pnlAlumno_Paint;
             // 
             // pnlUsuario
             // 
@@ -265,11 +263,11 @@
             txtNombreAlumno.Size = new Size(266, 33);
             txtNombreAlumno.TabIndex = 19;
             // 
-            // dgvCarreras
+            // dgvAlumnos
             // 
-            dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvCarreras.BackgroundColor = Color.RosyBrown;
-            dgvCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvAlumnos.BackgroundColor = Color.RosyBrown;
+            dgvAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.MenuHighlight;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -277,12 +275,12 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlDarkDark;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvCarreras.DefaultCellStyle = dataGridViewCellStyle2;
-            dgvCarreras.GridColor = Color.RosyBrown;
-            dgvCarreras.Location = new Point(83, 455);
-            dgvCarreras.Name = "dgvCarreras";
-            dgvCarreras.Size = new Size(670, 282);
-            dgvCarreras.TabIndex = 18;
+            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvAlumnos.GridColor = Color.RosyBrown;
+            dgvAlumnos.Location = new Point(83, 455);
+            dgvAlumnos.Name = "dgvAlumnos";
+            dgvAlumnos.Size = new Size(670, 282);
+            dgvAlumnos.TabIndex = 18;
             // 
             // lblTitulo
             // 
@@ -314,7 +312,7 @@
             Controls.Add(pcbLogo);
             Controls.Add(lblTitulo);
             Controls.Add(txtNombreAlumno);
-            Controls.Add(dgvCarreras);
+            Controls.Add(dgvAlumnos);
             Controls.Add(btnBorrar);
             Controls.Add(label2);
             Controls.Add(btnNuevo);
@@ -325,12 +323,11 @@
             DoubleBuffered = true;
             Name = "frmAlumnos";
             Text = "frmAlumnos";
-            Load += frmAlumnos_Load;
             pnlAlumno.ResumeLayout(false);
             pnlAlumno.PerformLayout();
             pnlUsuario.ResumeLayout(false);
             pnlUsuario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvCarreras).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlumnos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -359,7 +356,7 @@
         private Button btnNuevo;
         private Button btnGuardar;
         private TextBox txtNombreAlumno;
-        private DataGridView dgvCarreras;
+        private DataGridView dgvAlumnos;
         private Label lblTitulo;
         private PictureBox pcbLogo;
     }
