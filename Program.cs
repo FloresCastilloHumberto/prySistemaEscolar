@@ -12,14 +12,16 @@ namespace prySistemaEscolar
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new frmCarreras());
-            
-            using (frmLogin login = new frmLogin())
+
+            /*using (frmLogin login = new frmLogin())
             {
                 if (login.ShowDialog() == DialogResult.OK)
                 {
                     Application.Run(new frmPrincipal());
                 }
-            }
+            }*/
+
+            Application.Run(new frmAlumnos());
         }
     }
 }
