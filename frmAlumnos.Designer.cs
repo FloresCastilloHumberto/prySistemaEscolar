@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            txtMatricula = new TextBox();
             txtNombre = new TextBox();
             txtAPaterno = new TextBox();
             txtAMaterno = new TextBox();
@@ -53,21 +52,12 @@
             dgvAlumnos = new DataGridView();
             lblTitulo = new Label();
             pcbLogo = new PictureBox();
+            txtMatricula = new TextBox();
             pnlAlumno.SuspendLayout();
             pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
-            // 
-            // txtMatriculaAlumno
-            // 
-            txtMatriculaAlumno.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            txtMatriculaAlumno.Location = new Point(10, 11);
-            txtMatriculaAlumno.Name = "txtMatriculaAlumno";
-            txtMatriculaAlumno.PlaceholderText = "Buscar por matricula.";
-            txtMatriculaAlumno.Size = new Size(223, 27);
-            txtMatriculaAlumno.TabIndex = 0;
-            txtMatriculaAlumno.TextChanged += txtMatriculaAlumno_TextChanged;
             // 
             // txtNombre
             // 
@@ -152,7 +142,7 @@
             // 
             // pnlAlumno
             // 
-            pnlAlumno.Controls.Add(txtMatriculaAlumno);
+            pnlAlumno.Controls.Add(txtMatricula);
             pnlAlumno.Controls.Add(txtNombre);
             pnlAlumno.Controls.Add(txtAPaterno);
             pnlAlumno.Controls.Add(cmbCarrera);
@@ -304,13 +294,22 @@
             pcbLogo.TabIndex = 21;
             pcbLogo.TabStop = false;
             // 
+            // txtMatricula
+            // 
+            txtMatricula.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            txtMatricula.Location = new Point(11, 12);
+            txtMatricula.Name = "txtMatricula";
+            txtMatricula.PlaceholderText = "Matricula";
+            txtMatricula.Size = new Size(223, 27);
+            txtMatricula.TabIndex = 11;
+            // 
             // frmAlumnos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.fondo;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(815, 749);
+            ClientSize = new Size(815, 701);
             Controls.Add(pcbLogo);
             Controls.Add(lblTitulo);
             Controls.Add(txtNombreAlumno);
@@ -361,5 +360,6 @@
         private DataGridView dgvAlumnos;
         private Label lblTitulo;
         private PictureBox pcbLogo;
+        private TextBox txtMatricula;
     }
 }
