@@ -95,7 +95,7 @@ namespace prySistemaEscolar
             }
             return tabla;
         }
-        public DataTable ObtenerTutores()
+        public DataTable Consultar()
         {
             tabla = new DataTable();
             try
@@ -103,16 +103,37 @@ namespace prySistemaEscolar
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT idTutor, nombreTutor FROM tbltutores;";
-                    using (consulta = new MySqlDataAdapter(sql, conexion))
+                    // Consulta SQL usando el operador LIKE para coincidencias parciales
+                    string sql = "SELECT A.matricula AS Matrícula, " +
+                                 "A.nombreAlumno AS Nombre, " +
+                                 "A.apellidoP AS 'A. Paterno', " +
+                                 "A.apellidoM AS 'A. Materno', " +
+                                 "C.nombreCarrera AS Carrera, " +
+                                 "T.nombreTutor AS Tutor, " +
+                                 "U.vchnombreUsuario AS Usuario, " +
+                                 "U.vhcpassword, " + //Se agrega password
+                                 "U.vhcperfil, " +   // se agrega perfil
+                                 "A.direccion, A.telefono, A.correo, A.promedioBachillerato, A.foto, A.idTutor, A.idCarrera, A.idUsuario " +
+                                 "FROM tblalumnos A " +
+                                 "INNER JOIN tblcarreras C ON A.idCarrera = C.idCarrera " +
+                                 "INNER JOIN tbltutores T ON A.idTutor = T.idTutor " +
+                                  "INNER JOIN tblusuarios U ON A.idUsuario = U.intidUsuario WHERE A.matricula LIKE @matricula;";
+
+                    using (var comando = new MySqlCommand(sql, conexion))
                     {
-                        consulta.Fill(tabla);
-                    }
-                }
+                        // Se agregan los comodines '%' para buscar cualquier coincidencia que contenga el texto
+                        comando.Parameters.AddWithValue("@matricula", "%" + matricula + "%");
+
+                        using (consulta = new MySqlDataAdapter(comando))
+                        {
+                            consulta.Fill(tabla);
+                        }
+                    } // Libera el comando automáticamente
+                } // Libera la conexión automáticamente
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al obtener el catálogo de tutores: " + ex.Message);
+                throw new Exception("Error en la conexion de la base de datos: " + ex.Message);
             }
             return tabla;
         }

@@ -59,14 +59,15 @@
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
             // 
-            // txtMatricula
+            // txtMatriculaAlumno
             // 
-            txtMatricula.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            txtMatricula.Location = new Point(10, 11);
-            txtMatricula.Name = "txtMatricula";
-            txtMatricula.PlaceholderText = "Matricula";
-            txtMatricula.Size = new Size(223, 27);
-            txtMatricula.TabIndex = 0;
+            txtMatriculaAlumno.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            txtMatriculaAlumno.Location = new Point(10, 11);
+            txtMatriculaAlumno.Name = "txtMatriculaAlumno";
+            txtMatriculaAlumno.PlaceholderText = "Buscar por matricula.";
+            txtMatriculaAlumno.Size = new Size(223, 27);
+            txtMatriculaAlumno.TabIndex = 0;
+            txtMatriculaAlumno.TextChanged += txtMatriculaAlumno_TextChanged;
             // 
             // txtNombre
             // 
@@ -151,7 +152,7 @@
             // 
             // pnlAlumno
             // 
-            pnlAlumno.Controls.Add(txtMatricula);
+            pnlAlumno.Controls.Add(txtMatriculaAlumno);
             pnlAlumno.Controls.Add(txtNombre);
             pnlAlumno.Controls.Add(txtAPaterno);
             pnlAlumno.Controls.Add(cmbCarrera);
@@ -336,7 +337,7 @@
 
         #endregion
 
-        private TextBox txtMatricula;
+        private TextBox txtMatriculaAlumno;
         private TextBox txtNombre;
         private TextBox txtAPaterno;
         private TextBox txtAMaterno;
