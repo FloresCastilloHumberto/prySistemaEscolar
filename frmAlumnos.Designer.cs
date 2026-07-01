@@ -309,7 +309,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.fondo;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(815, 749);
+            ClientSize = new Size(819, 749);
             Controls.Add(pcbLogo);
             Controls.Add(lblTitulo);
             Controls.Add(txtNombreAlumno);
