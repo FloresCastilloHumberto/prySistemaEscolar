@@ -95,6 +95,25 @@ namespace prySistemaEscolar
             }
             return tabla;
         }
+
+        //Metodo para limbiar por medio del panel los Textbox y Combobox
+        public void LimpiarPanel(Panel panelDestino)
+        {
+            foreach (Control control in panelDestino.Controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Clear();
+                }
+                else if (control is ComboBox)
+                {
+                    ((ComboBox)control).SelectedIndex = 0;
+
+                }
+            }
+        }
+
+
         public DataTable Consultar()
         {
             tabla = new DataTable();
@@ -104,15 +123,15 @@ namespace prySistemaEscolar
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     // Consulta SQL usando el operador LIKE para coincidencias parciales
-                    string sql = "SELECT A.matricula AS Matrícula, " +
+                    string sql = "SELECT A.matricula AS Matricula, " +
                                  "A.nombreAlumno AS Nombre, " +
                                  "A.apellidoP AS 'A. Paterno', " +
                                  "A.apellidoM AS 'A. Materno', " +
                                  "C.nombreCarrera AS Carrera, " +
                                  "T.nombreTutor AS Tutor, " +
                                  "U.vchnombreUsuario AS Usuario, " +
-                                 "U.vhcpassword, " + //Se agrega password
-                                 "U.vhcperfil, " +   // se agrega perfil
+                                 "U.vchPASSWORD, " + //Se agrega password
+                                 "U.vchperfil, " +   // se agrega perfil
                                  "A.direccion, A.telefono, A.correo, A.promedioBachillerato, A.foto, A.idTutor, A.idCarrera, A.idUsuario " +
                                  "FROM tblalumnos A " +
                                  "INNER JOIN tblcarreras C ON A.idCarrera = C.idCarrera " +
