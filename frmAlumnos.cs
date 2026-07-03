@@ -98,7 +98,7 @@ namespace prySistemaEscolar
                 idUsuario = int.Parse(dgvAlumnos.CurrentRow.Cells["idUsuario"].Value.ToString());
 
                 //Esto es para la tabla alumnos
-                txtMatricula.Text = idMatricula.ToString();
+                txtMatriculaAlumno.Text = idMatricula.ToString();
                 txtNombre.Text = dgvAlumnos.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtAPaterno.Text = dgvAlumnos.CurrentRow.Cells["A. Paterno"].Value.ToString();
                 txtAMaterno.Text = dgvAlumnos.CurrentRow.Cells["A. Materno"].Value.ToString();
@@ -119,6 +119,34 @@ namespace prySistemaEscolar
             catch (Exception ex)
             {
                 MessageBox.Show("Error al mapear los datos seleccionados: " + ex.Message);
+            }
+
+        }
+
+        private void txtMatriculAlumno_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMatriculAlumno.Text))
+            {
+                CargarGrid();
+                return;
+            }
+
+
+            alumnos = new clsAlumnos();
+            dgvAlumnos.DataSource = null;
+            dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            try
+            {
+                // Asigna el texto del filtro a la propiedad de la clase
+                alumnos.Matricula = int.Parse(txtMatriculAlumno.Text);
+
+                // Actualiza el DataGridView con los resultados filtrados
+                dgvAlumnos.DataSource = alumnos.Consultar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Requiere asignar datos de entrada" + ex.Message);
             }
 
         }

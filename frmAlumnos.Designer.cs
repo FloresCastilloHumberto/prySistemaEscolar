@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             txtNombre = new TextBox();
             txtAPaterno = new TextBox();
             txtAMaterno = new TextBox();
@@ -39,6 +39,7 @@
             cmbTutor = new ComboBox();
             cmbCarrera = new ComboBox();
             pnlAlumno = new Panel();
+            txtMatriculAlumno = new TextBox();
             pnlUsuario = new Panel();
             cmbPerfil = new ComboBox();
             txtPassword = new TextBox();
@@ -52,7 +53,6 @@
             dgvAlumnos = new DataGridView();
             lblTitulo = new Label();
             pcbLogo = new PictureBox();
-            txtMatricula = new TextBox();
             pnlAlumno.SuspendLayout();
             pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
@@ -142,7 +142,7 @@
             // 
             // pnlAlumno
             // 
-            pnlAlumno.Controls.Add(txtMatricula);
+            pnlAlumno.Controls.Add(txtMatriculAlumno);
             pnlAlumno.Controls.Add(txtNombre);
             pnlAlumno.Controls.Add(txtAPaterno);
             pnlAlumno.Controls.Add(cmbCarrera);
@@ -156,6 +156,16 @@
             pnlAlumno.Name = "pnlAlumno";
             pnlAlumno.Size = new Size(476, 201);
             pnlAlumno.TabIndex = 11;
+            // 
+            // txtMatriculAlumno
+            // 
+            txtMatriculAlumno.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            txtMatriculAlumno.Location = new Point(11, 12);
+            txtMatriculAlumno.Name = "txtMatriculAlumno";
+            txtMatriculAlumno.PlaceholderText = "Buscar por matricula";
+            txtMatriculAlumno.Size = new Size(223, 27);
+            txtMatriculAlumno.TabIndex = 11;
+            txtMatriculAlumno.TextChanged += txtMatriculAlumno_TextChanged;
             // 
             // pnlUsuario
             // 
@@ -259,14 +269,14 @@
             dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAlumnos.BackgroundColor = Color.RosyBrown;
             dgvAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle3;
             dgvAlumnos.GridColor = Color.RosyBrown;
             dgvAlumnos.Location = new Point(83, 455);
             dgvAlumnos.Name = "dgvAlumnos";
@@ -293,15 +303,6 @@
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 21;
             pcbLogo.TabStop = false;
-            // 
-            // txtMatricula
-            // 
-            txtMatricula.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            txtMatricula.Location = new Point(11, 12);
-            txtMatricula.Name = "txtMatricula";
-            txtMatricula.PlaceholderText = "Matricula";
-            txtMatricula.Size = new Size(223, 27);
-            txtMatricula.TabIndex = 11;
             // 
             // frmAlumnos
             // 
@@ -360,6 +361,6 @@
         private DataGridView dgvAlumnos;
         private Label lblTitulo;
         private PictureBox pcbLogo;
-        private TextBox txtMatricula;
+        private TextBox txtMatriculAlumno;
     }
 }
