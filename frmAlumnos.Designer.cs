@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             txtNombre = new TextBox();
             txtAPaterno = new TextBox();
             txtAMaterno = new TextBox();
@@ -165,7 +165,6 @@
             txtMatriculAlumno.PlaceholderText = "Buscar por matricula";
             txtMatriculAlumno.Size = new Size(223, 27);
             txtMatriculAlumno.TabIndex = 11;
-            txtMatriculAlumno.TextChanged += txtMatriculAlumno_TextChanged;
             // 
             // pnlUsuario
             // 
@@ -244,6 +243,7 @@
             btnNuevo.Size = new Size(147, 77);
             btnNuevo.TabIndex = 16;
             btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnGuardar
             // 
@@ -263,20 +263,21 @@
             txtNombreAlumno.PlaceholderText = "Buscar Alumno";
             txtNombreAlumno.Size = new Size(266, 33);
             txtNombreAlumno.TabIndex = 19;
+            txtNombreAlumno.TextChanged += txtNombreAlumno_TextChanged;
             // 
             // dgvAlumnos
             // 
             dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAlumnos.BackgroundColor = Color.RosyBrown;
             dgvAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.MenuHighlight;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle1;
             dgvAlumnos.GridColor = Color.RosyBrown;
             dgvAlumnos.Location = new Point(83, 455);
             dgvAlumnos.Name = "dgvAlumnos";
