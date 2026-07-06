@@ -22,10 +22,17 @@ namespace prySistemaEscolar
         private int idCarrera;//foraneo
         private int idUsuario;
 
+        //Estos atributos agregamos para registrar el usuario
+        private string nombreUsuario;
+        private string password;
+        private string perfil;
+
         // Adaptador y tabla virtuales de la clase
         private MySqlDataAdapter consulta;
         private DataTable tabla;
+        private MySqlCommand comando;
 
+        //Propiedades
         public int Matricula { get => matricula; set => matricula = value; }
         public string NombreAlumno { get => nombreAlumno; set => nombreAlumno = value; }
         public string ApellidoP { get => apellidoP; set => apellidoP = value; }
@@ -37,6 +44,10 @@ namespace prySistemaEscolar
         public int IdTutor { get => idTutor; set => idTutor = value; }
         public int IdCarrera { get => idCarrera; set => idCarrera = value; }
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
+        public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
+        public string Password { get => password; set => password = value; }
+        public string Perfil { get => perfil; set => perfil = value; }
+
 
         public DataTable CargarDataGrid()
         {
@@ -179,6 +190,111 @@ namespace prySistemaEscolar
             return tabla;
         }
 
+        public string GuardarActualizar(int tipoOperacion)
+        {
+            string msg = "";
+            clsConexion conexionBD = new clsConexion();
 
+            try
+            {
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    using (var transaccion = conexion.BeginTransaction())
+                    {
+                        try
+                        {
+                            switch (tipoOperacion)
+                            {
+                                case 0: //NUEVO E INSERTAR
+                                        //insertamos en la tabla tblusuarios
+                                    string sqlInsUser = "INSERT INTO tblusuarios(vchnombreUsuario, vchpassword, vchperfil, vchestado) " +
+                                                        "VALUES(@nomUser, MD5(@pass), @perfil, 'Activo'); SELECT LAST_INSERT_ID();";
+
+                                    //Se recupera el ultimo ID insertado
+                                    int nuevoIdUsuario = 0;
+                                    using (comando = new MySqlCommand(sqlInsUser, conexion, transaccion))
+                                    {
+                                        comando.Parameters.AddWithValue("@nomUser", nombreUsuario);
+                                        comando.Parameters.AddWithValue("@pass", password);
+                                        comando.Parameters.AddWithValue("@perfil", perfil);
+                                        nuevoIdUsuario = Convert.ToInt32(comando.ExecuteScalar());
+                                    }
+
+                                    // Paso B: Insertar el alumno en tblalumnos vinculando el ID de usuario obtenido
+                                    string sqlInsAlumno = "INSERT INTO tblalumnos(matricula, idUsuario, nombreAlumno, apellidoP, apellidoM, direccion, telefono, correo, promedioBachillerato, idTutor, idCarrera) " +
+                                                          "VALUES(@matricula, @idUsuario, @nombre, @apP, @apM, @dir, @tel, @correo, @prom, @idTutor, @idCarrera);";
+
+                                    using (comando = new MySqlCommand(sqlInsAlumno, conexion, transaccion))
+                                    {
+                                        comando.Parameters.AddWithValue("@matricula", matricula);
+                                        comando.Parameters.AddWithValue("@idUsuario", nuevoIdUsuario);
+                                        comando.Parameters.AddWithValue("@nombre", nombreAlumno);
+                                        comando.Parameters.AddWithValue("@apP", apellidoP);
+                                        comando.Parameters.AddWithValue("@apM", apellidoM);
+                                        comando.Parameters.AddWithValue("@dir", direccion);
+                                        comando.Parameters.AddWithValue("@tel", telefono);
+                                        comando.Parameters.AddWithValue("@correo", correo);
+                                        comando.Parameters.AddWithValue("@prom", promedioBachillerato);
+                                        comando.Parameters.AddWithValue("@idTutor", idTutor);
+                                        comando.Parameters.AddWithValue("@idCarrera", idCarrera);
+
+                                        comando.ExecuteNonQuery();
+                                    }
+
+                                    msg = "El alumno y sus credenciales se guardaron correctamente.";
+                                    break;
+
+                                case 1: // ACTUALIZAR
+                                        // Paso A: Actualizar la tabla de usuarios utilizando el ID que recuperamos en el clic del Grid
+                                    string sqlUpdUser = "UPDATE tblusuarios SET vchnombreUsuario = @nomUser, vchpassword = MD5(@pass), vchperfil = @perfil " +
+                                                        "WHERE intidUsuario = @idUsuario;";
+
+                                    using (comando = new MySqlCommand(sqlUpdUser, conexion, transaccion))
+                                    {
+                                        comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+                                        comando.Parameters.AddWithValue("@nomUser", nombreUsuario);
+                                        comando.Parameters.AddWithValue("@pass", password);
+                                        comando.Parameters.AddWithValue("@perfil", perfil);
+
+                                        comando.ExecuteNonQuery();
+                                    }
+
+                                    // Paso B: Actualizar los datos del expediente en tblalumnos mediante su matricula
+                                    string sqlUpdAlumno = "UPDATE tblalumnos SET nombreAlumno = @nombre, apellidoP = @apP, apellidoM = @apM, " +
+                                                          "direccion = @dir, telefono = @tel, correo = @correo, promedioBachillerato = @prom, " +
+                                                          "idTutor = @idTutor, idCarrera = @idCarrera WHERE matricula = @matricula;";
+
+                                    using (comando = new MySqlCommand(sqlUpdAlumno, conexion, transaccion))
+                                    {
+                                        comando.Parameters.AddWithValue("@matricula", matricula);
+                                        comando.Parameters.AddWithValue("@nombre", nombreAlumno);
+                                        comando.Parameters.AddWithValue("@apP", apellidoP);
+                                        comando.Parameters.AddWithValue("@apM", apellidoM);
+                                        comando.Parameters.AddWithValue("@dir", direccion);
+                                        comando.Parameters.AddWithValue("@tel", telefono);
+                                        comando.Parameters.AddWithValue("@correo", correo);
+                                        comando.Parameters.AddWithValue("@prom", promedioBachillerato);
+                                        comando.Parameters.AddWithValue("@idTutor", idTutor);
+                                        comando.Parameters.AddWithValue("@idCarrera", idCarrera);
+
+                                        comando.ExecuteNonQuery();
+                                    }
+                                    break;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            // Manejo de excepciones interno
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones externo
+            }
+
+            return msg;
+        } //Finaliza el metodo
     }
 }
