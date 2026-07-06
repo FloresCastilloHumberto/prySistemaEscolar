@@ -131,7 +131,7 @@ namespace prySistemaEscolar
                                  "T.nombreTutor AS Tutor, " +
                                  "U.vchnombreUsuario AS Usuario, " +
                                  "U.vchPASSWORD, " + //Se agrega password
-                                 "U.vchperfil, " +   // se agrega perfil
+                                 "U.vchperfil, " +   // se  agrega perfil
                                  "A.direccion, A.telefono, A.correo, A.promedioBachillerato, A.foto, A.idTutor, A.idCarrera, A.idUsuario " +
                                  "FROM tblalumnos A " +
                                  "INNER JOIN tblcarreras C ON A.idCarrera = C.idCarrera " +

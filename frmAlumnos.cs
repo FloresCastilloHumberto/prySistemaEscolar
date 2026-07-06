@@ -98,7 +98,7 @@ namespace prySistemaEscolar
                 idUsuario = int.Parse(dgvAlumnos.CurrentRow.Cells["idUsuario"].Value.ToString());
 
                 //Esto es para la tabla alumnos
-                txtMatriculAlumno.Text = idMatricula.ToString();
+                txtMatricula.Text = idMatricula.ToString();
                 txtNombre.Text = dgvAlumnos.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtAPaterno.Text = dgvAlumnos.CurrentRow.Cells["A. Paterno"].Value.ToString();
                 txtAMaterno.Text = dgvAlumnos.CurrentRow.Cells["A. Materno"].Value.ToString();
@@ -130,17 +130,16 @@ namespace prySistemaEscolar
 
             alumnos.LimpiarPanel(pnlAlumno);
             alumnos.LimpiarPanel(pnlUsuario);
-            txtMatriculAlumno.Focus();
+            txtMatricula.Focus();
         }
 
-        private void txtNombreAlumno_TextChanged(object sender, EventArgs e)
+        private void txtMatriculAlumno_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtMatriculAlumno.Text))
             {
                 CargarGrid();
                 return;
             }
-
 
             alumnos = new clsAlumnos();
             dgvAlumnos.DataSource = null;
@@ -158,6 +157,7 @@ namespace prySistemaEscolar
             {
                 MessageBox.Show("Requiere asignar datos de entrada" + ex.Message);
             }
+
         }
     }
 }
