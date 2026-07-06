@@ -39,7 +39,7 @@
             cmbTutor = new ComboBox();
             cmbCarrera = new ComboBox();
             pnlAlumno = new Panel();
-            txtMatriculAlumno = new TextBox();
+            txtMatricula = new TextBox();
             pnlUsuario = new Panel();
             cmbPerfil = new ComboBox();
             txtPassword = new TextBox();
@@ -49,7 +49,7 @@
             btnBorrar = new Button();
             btnNuevo = new Button();
             btnGuardar = new Button();
-            txtNombreAlumno = new TextBox();
+            txtMatriculAlumno = new TextBox();
             dgvAlumnos = new DataGridView();
             lblTitulo = new Label();
             pcbLogo = new PictureBox();
@@ -142,7 +142,8 @@
             // 
             // pnlAlumno
             // 
-            pnlAlumno.Controls.Add(txtMatriculAlumno);
+            pnlAlumno.BackColor = SystemColors.MenuHighlight;
+            pnlAlumno.Controls.Add(txtMatricula);
             pnlAlumno.Controls.Add(txtNombre);
             pnlAlumno.Controls.Add(txtAPaterno);
             pnlAlumno.Controls.Add(cmbCarrera);
@@ -157,17 +158,18 @@
             pnlAlumno.Size = new Size(476, 201);
             pnlAlumno.TabIndex = 11;
             // 
-            // txtMatriculAlumno
+            // txtMatricula
             // 
-            txtMatriculAlumno.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            txtMatriculAlumno.Location = new Point(11, 12);
-            txtMatriculAlumno.Name = "txtMatriculAlumno";
-            txtMatriculAlumno.PlaceholderText = "Buscar por matricula";
-            txtMatriculAlumno.Size = new Size(223, 27);
-            txtMatriculAlumno.TabIndex = 11;
+            txtMatricula.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            txtMatricula.Location = new Point(11, 12);
+            txtMatricula.Name = "txtMatricula";
+            txtMatricula.PlaceholderText = "Matricula";
+            txtMatricula.Size = new Size(223, 27);
+            txtMatricula.TabIndex = 11;
             // 
             // pnlUsuario
             // 
+            pnlUsuario.BackColor = SystemColors.MenuHighlight;
             pnlUsuario.Controls.Add(cmbPerfil);
             pnlUsuario.Controls.Add(txtPassword);
             pnlUsuario.Controls.Add(txtUsuario);
@@ -255,20 +257,20 @@
             btnGuardar.TabIndex = 15;
             btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // txtNombreAlumno
+            // txtMatriculAlumno
             // 
-            txtNombreAlumno.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombreAlumno.Location = new Point(487, 412);
-            txtNombreAlumno.Name = "txtNombreAlumno";
-            txtNombreAlumno.PlaceholderText = "Buscar Alumno";
-            txtNombreAlumno.Size = new Size(266, 33);
-            txtNombreAlumno.TabIndex = 19;
-            txtNombreAlumno.TextChanged += txtNombreAlumno_TextChanged;
+            txtMatriculAlumno.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMatriculAlumno.Location = new Point(487, 412);
+            txtMatriculAlumno.Name = "txtMatriculAlumno";
+            txtMatriculAlumno.PlaceholderText = "Buscar por matricula";
+            txtMatriculAlumno.Size = new Size(266, 33);
+            txtMatriculAlumno.TabIndex = 19;
+            txtMatriculAlumno.TextChanged += txtMatriculAlumno_TextChanged;
             // 
             // dgvAlumnos
             // 
             dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvAlumnos.BackgroundColor = Color.RosyBrown;
+            dgvAlumnos.BackgroundColor = Color.Gray;
             dgvAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.MenuHighlight;
@@ -314,7 +316,7 @@
             ClientSize = new Size(815, 701);
             Controls.Add(pcbLogo);
             Controls.Add(lblTitulo);
-            Controls.Add(txtNombreAlumno);
+            Controls.Add(txtMatriculAlumno);
             Controls.Add(dgvAlumnos);
             Controls.Add(btnBorrar);
             Controls.Add(label2);
@@ -358,10 +360,10 @@
         private Button btnBorrar;
         private Button btnNuevo;
         private Button btnGuardar;
-        private TextBox txtNombreAlumno;
+        private TextBox txtMatriculAlumno;
         private DataGridView dgvAlumnos;
         private Label lblTitulo;
         private PictureBox pcbLogo;
-        private TextBox txtMatriculAlumno;
+        private TextBox txtMatricula;
     }
 }
