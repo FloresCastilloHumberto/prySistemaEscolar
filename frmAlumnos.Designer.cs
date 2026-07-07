@@ -256,6 +256,7 @@
             btnGuardar.Size = new Size(123, 77);
             btnGuardar.TabIndex = 15;
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // txtMatriculAlumno
             // 
