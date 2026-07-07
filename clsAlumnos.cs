@@ -207,7 +207,7 @@ namespace prySistemaEscolar
                             {
                                 case 0: //NUEVO E INSERTAR
                                         //insertamos en la tabla tblusuarios
-                                    string sqlInsUser = "INSERT INTO tblusuarios(vchnombreUsuario, vchpassword, vchperfil, vchestado) " +
+                                    string sqlInsUser = "INSERT INTO tblusuarios(vchnombreUsuario, vchPASSWORD, vchperfil, vchestado)" +
                                                         "VALUES(@nomUser, MD5(@pass), @perfil, 'Activo'); SELECT LAST_INSERT_ID();";
 
                                     //Se recupera el ultimo ID insertado
@@ -221,7 +221,7 @@ namespace prySistemaEscolar
                                     }
 
                                     // Paso B: Insertar el alumno en tblalumnos vinculando el ID de usuario obtenido
-                                    string sqlInsAlumno = "INSERT INTO tblalumnos(matricula, idUsuario, nombreAlumno, apellidoP, apellidoM, direccion, telefono, correo, promedioBachillerato, idTutor, idCarrera) " +
+                                    string sqlInsAlumno = "INSERT INTO tblalumnos(matricula, idUsuario, nombreAlumno, apellidoP, apellidoM, direccion, telefono, correo, promedioBachillerato, idTutor, idCarrera)" +
                                                           "VALUES(@matricula, @idUsuario, @nombre, @apP, @apM, @dir, @tel, @correo, @prom, @idTutor, @idCarrera);";
 
                                     using (comando = new MySqlCommand(sqlInsAlumno, conexion, transaccion))
@@ -243,7 +243,6 @@ namespace prySistemaEscolar
 
                                     msg = "El alumno y sus credenciales se guardaron correctamente.";
                                     break;
-
                                 case 1: // ACTUALIZAR
                                         // Paso A: Actualizar la tabla de usuarios utilizando el ID que recuperamos en el clic del Grid
                                     string sqlUpdUser = "UPDATE tblusuarios SET vchnombreUsuario = @nomUser, vchpassword = MD5(@pass), vchperfil = @perfil " +
@@ -279,19 +278,24 @@ namespace prySistemaEscolar
 
                                         comando.ExecuteNonQuery();
                                     }
+                                    msg = "Los datos del alumno se actualizaron correctamente.";
                                     break;
                             }
+                            //Si todo se ejecuto sin errores en el switch, confirmamos los cambios en la bd
+                            transaccion.Commit();
                         }
                         catch (Exception ex)
                         {
-                            // Manejo de excepciones interno
+                            //Si algo fallo en el usuario o en el alumno, deshacemos todo para evitar incosistencias
+                            transaccion.Rollback();
+                            throw new Exception("Error en la operacion. Se cancelan los cambios: " + ex.Message);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones externo
+                throw new Exception("Error de conexion: " + ex.Message);
             }
 
             return msg;
@@ -318,7 +322,7 @@ namespace prySistemaEscolar
                             }
 
                             //eliminamos el usuario
-                            string sqlDelUsuario = "DELETE FROM tblusuarios WHERE intIdUsuario = @idUsuario;";
+                            string sqlDelUsuario = "DELETE FROM tblusuarios WHERE intidUsuario = @idUsuario;";
                             using (comando = new MySqlCommand(sqlDelUsuario, conexion, transaccion))
                             {
                                 comando.Parameters.AddWithValue("@idUsuario", idUsuario);
