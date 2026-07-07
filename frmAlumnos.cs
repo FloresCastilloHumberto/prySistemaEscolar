@@ -170,13 +170,13 @@ namespace prySistemaEscolar
                 alumnos = new clsAlumnos();
 
                 // 1. Llenamos las propiedades del bloque Alumno
-                alumnos.Matricula = int.Parse(txtMatriculAlumno.Text);
-                alumnos.NombreAlumno = txtNombre.Text;
-                alumnos.ApellidoP = txtAPaterno.Text;
-                alumnos.ApellidoM = txtAMaterno.Text;
-                alumnos.Direccion = txtDireccion.Text;
-                alumnos.Telefono = txtTelefono.Text;
-                alumnos.Correo = txtCorreo.Text;
+                alumnos.Matricula = int.Parse(txtMatricula.Text);
+                alumnos.NombreAlumno = string.IsNullOrEmpty(txtNombre.Text) ? null : txtNombre.Text;
+                alumnos.ApellidoP = string.IsNullOrEmpty(txtAPaterno.Text) ? null : txtAPaterno.Text;
+                alumnos.ApellidoM = string.IsNullOrEmpty(txtAMaterno.Text) ? null : txtAMaterno.Text;
+                alumnos.Direccion = string.IsNullOrEmpty(txtDireccion.Text) ? null : txtDireccion.Text;
+                alumnos.Telefono = string.IsNullOrEmpty(txtTelefono.Text) ? null : txtTelefono.Text;
+                alumnos.Correo = string.IsNullOrEmpty(txtCorreo.Text) ? null : txtCorreo.Text;
                 alumnos.PromedioBachillerato = decimal.Parse(txtPromedioBachillerato.Text);
                 alumnos.IdCarrera = Convert.ToInt32(cmbCarrera.SelectedValue);
                 alumnos.IdTutor = Convert.ToInt32(cmbTutor.SelectedValue);
@@ -213,6 +213,33 @@ namespace prySistemaEscolar
             }
         }
 
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            // Concatenación del mensaje de confirmación largo que se muestra en las capturas
+            var respuesta = MessageBox.Show($"¿Estás completamente seguro de eliminar permanentemente al alumno con Matrícula: {idMatricula}?\nEsta acción borrará también su cuenta de usuario.", "¡ADVERTENCIA!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                try
+                {
+                    alumnos = new clsAlumnos();
+
+                    alumnos.Matricula = idMatricula;
+                    alumnos.IdUsuario = idUsuario;
+
+                    string resultado = alumnos.Eliminar();
+
+                    MessageBox.Show(resultado, "Registro Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    CargarGrid();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar eliminar el registro: " + ex.Message, "Error Operacional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
     }
 }
 
