@@ -196,6 +196,7 @@
             txtPassword.PlaceholderText = "Password";
             txtPassword.Size = new Size(223, 27);
             txtPassword.TabIndex = 14;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
