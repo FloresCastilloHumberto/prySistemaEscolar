@@ -150,5 +150,33 @@ namespace prySistemaEscolar
                 MessageBox.Show("No se pudieron guardar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            // Concatenación del mensaje de confirmación largo que se muestra en las capturas
+            var respuesta = MessageBox.Show($"¿Estás completamente seguro de eliminar permanentemente al alumno con Matrícula: {idClave}?\nEsta acción borrará también su cuenta de usuario.", "¡ADVERTENCIA!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                try
+                {
+                    docentes = new clsDocentes();
+
+                    docentes.Clave = idClave;
+                    docentes.IdUsuario = idUsuario;
+
+                    string resultado = docentes.Eliminar();
+
+                    MessageBox.Show(resultado, "Registro Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    CargarGrid();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar eliminar el registro: " + ex.Message, "Error Operacional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }
