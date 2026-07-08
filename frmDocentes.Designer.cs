@@ -251,6 +251,7 @@
             btnGuardar.Size = new Size(123, 77);
             btnGuardar.TabIndex = 28;
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // frmDocentes
             // 
