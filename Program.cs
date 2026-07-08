@@ -21,7 +21,7 @@ namespace prySistemaEscolar
                 }
             }*/
 
-            Application.Run(new frmAlumnos());
+            Application.Run(new frmDocentes());
         }
     }
 }
