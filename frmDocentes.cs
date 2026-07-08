@@ -67,5 +67,32 @@ namespace prySistemaEscolar
                 MessageBox.Show("Error al mapear los datos seleccionados: " + ex.Message);
             }
         }
+
+        private void txtClaveDocente_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtClaveDocente.Text))
+            {
+                CargarGrid();
+                return;
+            }
+
+            docentes = new clsDocentes();
+            dgvDocentes.DataSource = null;
+            dgvDocentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            try
+            {
+                // Asigna el texto del filtro a la propiedad de la clase
+                docentes.Clave = int.Parse(txtClaveDocente.Text);
+
+                // Actualiza el DataGridView con los resultados filtrados
+                dgvDocentes.DataSource = docentes.Consultar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Requiere asignar datos de entrada" + ex.Message);
+            }
+        }
+
     }
 }
