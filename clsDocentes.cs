@@ -67,7 +67,8 @@ namespace prySistemaEscolar
             }
             return tabla;
         }
-
+        
+        //Consultar info por medio de la clave del docente
         public DataTable Consultar()
         {
             tabla = new DataTable();
