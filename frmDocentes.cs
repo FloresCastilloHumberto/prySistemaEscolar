@@ -94,5 +94,61 @@ namespace prySistemaEscolar
             }
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            idClave = 0;
+            idUsuario = 0;
+
+            docentes.LimpiarPanel(pnlAlumno);
+            docentes.LimpiarPanel(pnlUsuario);
+            txtClave.Focus();
+        }
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Determinamos el tipo de operación
+                int tipoOperacion = idClave == 0 ? 0 : 1;
+
+                docentes = new clsDocentes();
+
+                // 1. Llenamos las propiedades del bloque Alumno
+                docentes.Clave = int.Parse(txtClave.Text);
+                docentes.NombreDocente = string.IsNullOrEmpty(txtNombre.Text) ? null : txtNombre.Text;
+                docentes.Puesto = string.IsNullOrEmpty(txtPuesto.Text) ? null : txtPuesto.Text;
+                docentes.Telefono = string.IsNullOrEmpty(txtTelefono.Text) ? null : txtTelefono.Text;
+                docentes.Correo = string.IsNullOrEmpty(txtCorreo.Text) ? null : txtCorreo.Text;
+
+                // 2. Llenamos las propiedades del bloque Usuario
+                docentes.IdUsuario = idUsuario; // Será 0 si es nuevo, o el ID real si es update
+                docentes.NombreUsuario = string.IsNullOrEmpty(txtUsuario.Text) ? null : txtUsuario.Text;
+                docentes.Password = string.IsNullOrEmpty(txtPassword.Text) ? null : txtUsuario.Text;
+                docentes.Perfil = cmbPerfil.Text;
+
+                string msg = "";
+
+                // Si es una modificación (tipoOperacion = 1), pedimos confirmación como en carreras
+                if (tipoOperacion == 1)
+                {
+                    var resp = MessageBox.Show("¿Confirmar que deseas actualizar los datos de este alumno?", "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resp == DialogResult.Yes)
+                    {
+                        msg = docentes.GuardarActualizar(tipoOperacion);
+                        MessageBox.Show(msg, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else // Si es nuevo (tipoOperacion = 0), se guarda directo
+                {
+                    msg = docentes.GuardarActualizar(tipoOperacion);
+                    MessageBox.Show(msg, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                CargarGrid(); // Refrescamos la tabla del formulario para ver los cambios
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron guardar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

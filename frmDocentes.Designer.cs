@@ -240,6 +240,7 @@
             btnNuevo.Size = new Size(147, 77);
             btnNuevo.TabIndex = 29;
             btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnGuardar
             // 
