@@ -199,6 +199,7 @@
             txtClaveDocente.PlaceholderText = "Buscar por clave";
             txtClaveDocente.Size = new Size(266, 33);
             txtClaveDocente.TabIndex = 32;
+            txtClaveDocente.TextChanged += txtClaveDocente_TextChanged;
             // 
             // dgvDocentes
             // 

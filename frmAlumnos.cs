@@ -183,8 +183,8 @@ namespace prySistemaEscolar
 
                 // 2. Llenamos las propiedades del bloque Usuario
                 alumnos.IdUsuario = idUsuario; // Será 0 si es nuevo, o el ID real si es update
-                alumnos.NombreUsuario = txtUsuario.Text;
-                alumnos.Password = txtPassword.Text;
+                alumnos.NombreUsuario = string.IsNullOrEmpty(txtUsuario.Text) ? null : txtUsuario.Text;
+                alumnos.Password = string.IsNullOrEmpty(txtPassword.Text) ? null : txtUsuario.Text;
                 alumnos.Perfil = cmbPerfil.Text;
 
                 string msg = "";
