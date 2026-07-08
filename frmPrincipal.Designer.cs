@@ -80,6 +80,7 @@
             pcbAlumnos.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbAlumnos.TabIndex = 2;
             pcbAlumnos.TabStop = false;
+            pcbAlumnos.Click += pcbAlumnos_Click;
             pcbAlumnos.MouseDown += pcbGeneral_MouseDown;
             pcbAlumnos.MouseUp += pcbGeneral_MouseUp;
             // 
@@ -107,6 +108,7 @@
             pcbDocentes.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbDocentes.TabIndex = 4;
             pcbDocentes.TabStop = false;
+            pcbDocentes.Click += pcbDocentes_Click;
             pcbDocentes.MouseDown += pcbGeneral_MouseDown;
             pcbDocentes.MouseUp += pcbGeneral_MouseUp;
             // 
