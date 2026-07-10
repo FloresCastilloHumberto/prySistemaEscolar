@@ -170,21 +170,20 @@ namespace prySistemaEscolar
                                     break;
                                 case 1: // ACTUALIZAR
                                         // Paso A: Actualizar la tabla de usuarios utilizando el ID que recuperamos en el clic del Grid
-                                    string sqlUpdUser = "UPDATE tblusuarios SET vchnombreUsuario = @nomUser, vchpassword = MD5(@pass), vchperfil = @perfil " +
+                                    string sqlUpdUser = "UPDATE tblusuarios SET vchnombreUsuario = @nomUser, vchperfil = @perfil " +
                                                         "WHERE intidUsuario = @idUsuario;";
 
                                     using (comando = new MySqlCommand(sqlUpdUser, conexion, transaccion))
                                     {
                                         comando.Parameters.AddWithValue("@idUsuario", idUsuario);
                                         comando.Parameters.AddWithValue("@nomUser", nombreUsuario);
-                                        comando.Parameters.AddWithValue("@pass", password);
                                         comando.Parameters.AddWithValue("@perfil", perfil);
 
                                         comando.ExecuteNonQuery();
                                     }
 
-                                    // Paso B: Actualizar los datos del expediente en tbldocentes mediante su matricula
-                                    string sqlUpdAlumno = "UPDATE tbldocentes SET nombreDocente = @nombre, puesto = @puesto" +
+                                    // Paso B: Actualizar los datos del expediente en tbldocentes mediante su clave
+                                    string sqlUpdAlumno = "UPDATE tbldocentes SET nombreDocente = @nombre, puesto = @puesto," +
                                                           "telefono = @tel, correo = @correo WHERE claveDocente = @clave;";
 
                                     using (comando = new MySqlCommand(sqlUpdAlumno, conexion, transaccion))
