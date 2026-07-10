@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             txtNombre = new TextBox();
             txtTelefono = new TextBox();
             txtCorreo = new TextBox();
             pnlAlumno = new Panel();
             txtMatricula = new TextBox();
+            txtAPaterno = new TextBox();
+            cmbCarrera = new ComboBox();
+            txtPromedioBachillerato = new TextBox();
+            txtAMaterno = new TextBox();
+            cmbTutor = new ComboBox();
+            txtDireccion = new TextBox();
             pnlUsuario = new Panel();
             cmbPerfil = new ComboBox();
             txtPassword = new TextBox();
@@ -47,12 +53,6 @@
             dgvAlumnos = new DataGridView();
             lblTitulo = new Label();
             pcbLogo = new PictureBox();
-            txtAPaterno = new TextBox();
-            cmbCarrera = new ComboBox();
-            cmbTutor = new ComboBox();
-            txtPromedioBachillerato = new TextBox();
-            txtDireccion = new TextBox();
-            txtAMaterno = new TextBox();
             pnlAlumno.SuspendLayout();
             pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
@@ -113,6 +113,60 @@
             txtMatricula.Size = new Size(223, 27);
             txtMatricula.TabIndex = 11;
             // 
+            // txtAPaterno
+            // 
+            txtAPaterno.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            txtAPaterno.Location = new Point(10, 77);
+            txtAPaterno.Name = "txtAPaterno";
+            txtAPaterno.PlaceholderText = "Apellido Paterno";
+            txtAPaterno.Size = new Size(223, 27);
+            txtAPaterno.TabIndex = 3;
+            // 
+            // cmbCarrera
+            // 
+            cmbCarrera.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            cmbCarrera.FormattingEnabled = true;
+            cmbCarrera.Location = new Point(240, 142);
+            cmbCarrera.Name = "cmbCarrera";
+            cmbCarrera.Size = new Size(223, 28);
+            cmbCarrera.TabIndex = 10;
+            // 
+            // txtPromedioBachillerato
+            // 
+            txtPromedioBachillerato.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            txtPromedioBachillerato.Location = new Point(240, 77);
+            txtPromedioBachillerato.Name = "txtPromedioBachillerato";
+            txtPromedioBachillerato.PlaceholderText = "Promedio Bachillerato";
+            txtPromedioBachillerato.Size = new Size(223, 27);
+            txtPromedioBachillerato.TabIndex = 8;
+            // 
+            // txtAMaterno
+            // 
+            txtAMaterno.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            txtAMaterno.Location = new Point(10, 110);
+            txtAMaterno.Name = "txtAMaterno";
+            txtAMaterno.PlaceholderText = "Apellido Materno";
+            txtAMaterno.Size = new Size(223, 27);
+            txtAMaterno.TabIndex = 4;
+            // 
+            // cmbTutor
+            // 
+            cmbTutor.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            cmbTutor.FormattingEnabled = true;
+            cmbTutor.Location = new Point(240, 109);
+            cmbTutor.Name = "cmbTutor";
+            cmbTutor.Size = new Size(223, 28);
+            cmbTutor.TabIndex = 9;
+            // 
+            // txtDireccion
+            // 
+            txtDireccion.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            txtDireccion.Location = new Point(10, 143);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.PlaceholderText = "Direccion";
+            txtDireccion.Size = new Size(223, 27);
+            txtDireccion.TabIndex = 5;
+            // 
             // pnlUsuario
             // 
             pnlUsuario.BackColor = SystemColors.MenuHighlight;
@@ -142,6 +196,7 @@
             txtPassword.PlaceholderText = "Password";
             txtPassword.Size = new Size(223, 27);
             txtPassword.TabIndex = 14;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
@@ -220,14 +275,14 @@
             dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAlumnos.BackgroundColor = Color.Gray;
             dgvAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle1;
             dgvAlumnos.GridColor = Color.RosyBrown;
             dgvAlumnos.Location = new Point(83, 451);
             dgvAlumnos.Name = "dgvAlumnos";
@@ -254,60 +309,6 @@
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 21;
             pcbLogo.TabStop = false;
-            // 
-            // txtAPaterno
-            // 
-            txtAPaterno.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            txtAPaterno.Location = new Point(10, 77);
-            txtAPaterno.Name = "txtAPaterno";
-            txtAPaterno.PlaceholderText = "Apellido Paterno";
-            txtAPaterno.Size = new Size(223, 27);
-            txtAPaterno.TabIndex = 3;
-            // 
-            // cmbCarrera
-            // 
-            cmbCarrera.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            cmbCarrera.FormattingEnabled = true;
-            cmbCarrera.Location = new Point(240, 142);
-            cmbCarrera.Name = "cmbCarrera";
-            cmbCarrera.Size = new Size(223, 28);
-            cmbCarrera.TabIndex = 10;
-            // 
-            // cmbTutor
-            // 
-            cmbTutor.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            cmbTutor.FormattingEnabled = true;
-            cmbTutor.Location = new Point(240, 109);
-            cmbTutor.Name = "cmbTutor";
-            cmbTutor.Size = new Size(223, 28);
-            cmbTutor.TabIndex = 9;
-            // 
-            // txtPromedioBachillerato
-            // 
-            txtPromedioBachillerato.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            txtPromedioBachillerato.Location = new Point(240, 77);
-            txtPromedioBachillerato.Name = "txtPromedioBachillerato";
-            txtPromedioBachillerato.PlaceholderText = "Promedio Bachillerato";
-            txtPromedioBachillerato.Size = new Size(223, 27);
-            txtPromedioBachillerato.TabIndex = 8;
-            // 
-            // txtDireccion
-            // 
-            txtDireccion.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            txtDireccion.Location = new Point(10, 143);
-            txtDireccion.Name = "txtDireccion";
-            txtDireccion.PlaceholderText = "Direccion";
-            txtDireccion.Size = new Size(223, 27);
-            txtDireccion.TabIndex = 5;
-            // 
-            // txtAMaterno
-            // 
-            txtAMaterno.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            txtAMaterno.Location = new Point(10, 110);
-            txtAMaterno.Name = "txtAMaterno";
-            txtAMaterno.PlaceholderText = "Apellido Materno";
-            txtAMaterno.Size = new Size(223, 27);
-            txtAMaterno.TabIndex = 4;
             // 
             // frmAlumnos
             // 
