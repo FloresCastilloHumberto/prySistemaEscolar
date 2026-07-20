@@ -261,7 +261,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.fondo;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(815, 701);
+            ClientSize = new Size(834, 711);
             Controls.Add(txtClaveDocente);
             Controls.Add(dgvDocentes);
             Controls.Add(btnBorrar);
